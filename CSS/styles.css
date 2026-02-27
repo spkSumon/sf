@@ -150,8 +150,8 @@ html {
     flex-shrink: 0; /* don't let the logo collapse */
 }
 .hero-image img {
-    height: 60px; /* adjust as needed */
-    width: auto;
+   min-height: 60px; /* adjust as needed */
+   max-width: 200px;
 }
 /* HERO MEDIA ONDER NAVBAR */
 /* ══════════════════════════════════════
@@ -616,3 +616,4 @@ text-decoration: none;
         height: 200px;
     }
 }
+
