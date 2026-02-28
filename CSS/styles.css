@@ -150,8 +150,8 @@ html {
     flex-shrink: 0; /* don't let the logo collapse */
 }
 .hero-image img {
-   min-height: 60px; /* adjust as needed */
-   max-width: 200px;
+    height: 60px; /* adjust as needed */
+    width: auto;
 }
 /* HERO MEDIA ONDER NAVBAR */
 /* ══════════════════════════════════════
@@ -581,7 +581,101 @@ text-decoration: none;
     transform: translateY(-1px);
     box-shadow: 0 4px 14px rgba(0,145,156,0.35);
 }
+/* ===================== */
+/* Kortingen */
+/* ====================== */
+.kortingen{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+.korting-vakjes {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8em;
+    transition: 0.7s;
+}
 
+/* ============================================================================== */
+/* ── Scroll popup ── */
+.scroll-popup {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: clamp(250px, 20vw, 300px);
+    min-height: 9rem;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    padding: 1.5rem;
+    border-left: 3px solid var(--teal);
+    z-index: 999;
+    /* hidden by default */
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.scroll-popup.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.scroll-popup-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 0.85rem;
+    color: var(--gray);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.2rem 0.4rem;
+    transition: color 0.2s;
+}
+
+.scroll-popup-close:hover {
+    color: var(--black);
+}
+
+.scroll-popup-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--teal);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.scroll-popup-text {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.scroll-popup-btn {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--teal);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+}
+
+.scroll-popup-btn:hover {
+    color: var(--teal-dark);
+}
 /* ── Responsive ── */
 @media (max-width: 900px) {
     .popular-grid {
@@ -616,4 +710,3 @@ text-decoration: none;
         height: 200px;
     }
 }
-

@@ -7,7 +7,31 @@
     <link rel="icon" type="image/x-icon" href="">
     <title>Interstuhl</title>
 </head>
+<!------ POP-UP SCREEN --------- -->
+<div class="scroll-popup" id="scrollPopup">
+    <button class="scroll-popup-close" id="popupClose">✕</button>
+    <div class="scroll-popup-content">
+        <p class="scroll-popup-label">Gratis verzending</p>
+        <p class="scroll-popup-text">Bestel vandaag en ontvang uw stoel binnen 3-5 werkdagen.</p>
+        <a href="#" class="scroll-popup-btn">Bekijk collectie →</a>
+    </div>
+</div>
+<script>
+    const popup = document.getElementById('scrollPopup');
+    const closeBtn = document.getElementById('popupClose');
+    let shown = false;
 
+    window.addEventListener("scroll", function(){
+        if (!shown && window.scrollY > 300) {
+            popup.classList.add('visible');
+            shown = true;
+        }
+    });
+
+    closeBtn.addEventListener("click",function(){
+        popup.classList.remove('visible');
+    })
+</script>
 <body>
     <header>
         <!-- Create a modern minimal topbar above the navbar with:
@@ -227,6 +251,18 @@ Responsive and clean design -->
                         <a href="#" class="btn btn-product">Bekijk product</a>
                     </div>
                 </div>
+    </article>
+    <article class="kortingen">
+        <div class="kortingen-content">
+            <h2 class="kortingen-title">Actieprijzen op bureaustoelen</h2>
+            <p class="kortingen-subtitle">Al onze ergonomische bureaustoelen in promo zijn uit voorraad leverbaar tegen scherpe prijzen. De meeste modellen zijn full option, geschikt voor groot en klein, zelfinstellend of meegroeimodel.
+
+            Kom vrijblijvend testen in onze toonzaal met meer dan 30 verschillende modellen, waar een ergonomie-expert u persoonlijk adviseert. Dankzij onze ruime, reeds gemonteerde voorraad kunt u uw stoel direct meenemen.
+
+            Bestelt u online? Dan zorgen wij voor gratis montage en levering in heel België en Nederland. Vind vandaag nog de ergonomische bureaustoel die écht bij u past!</p>
+            <a href="#" class="btn btn-kortingen">Bekijk kortingen</a>
+        </div>
+
     </article>
 </section>
 </main>
