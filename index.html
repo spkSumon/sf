@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="icon" type="image/x-icon" href="">
+    <!-- <link rel="icon" type="image/x-icon" href="IMG/favicon-sf.png"> -->
     <title>Interstuhl</title>
 </head>
 <!------ POP-UP SCREEN --------- -->
@@ -22,7 +22,7 @@
     let shown = false;
 
     window.addEventListener("scroll", function(){
-        if (!shown && window.scrollY > 300) {
+        if (shown && window.scrollY > 300) {
             popup.classList.add('visible');
             shown = true;
         }
@@ -57,9 +57,6 @@ Responsive and clean design -->
                     <li><a href="services">Onze Services</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="Webshop">Webshop</a></li>
-                </ul>
-                <ul class="nav-language">
-                    <li>Talen</li>
                 </ul>
             </div>
         </nav>
@@ -164,33 +161,7 @@ Responsive and clean design -->
             </div>
         </div>
     </article>
-    <article class="usp">
-        <!-- We gaan nu onze USPS hier zetten, enkele die we gaan gebruiken zijn:
-          Made in Germany
-          2 jaar garantie
-          30 dagen proefzitten
-             -->
-                <div class="usp-list">
-                    <div class="usp-item">
-                        <h3 class="usp-title">Made in Germany</h3>
-                        <p> 
-                            Onze bureaustoelen worden vervaardigd in Duitsland, waar vakmanschap en kwaliteit hoog in het vaandel staan.
-                        </p>
-                    </div>
-                    <div class="usp-item">
-                        <h3 class="usp-title">Made in Germany</h3>
-                        <p> 
-                            Onze bureaustoelen worden vervaardigd in Duitsland, waar vakmanschap en kwaliteit hoog in het vaandel staan.
-                        </p>
-                    </div>
-                    <div class="usp-item">
-                        <h3 class="usp-title">Made in Germany</h3>
-                        <p> 
-                            Onze bureaustoelen worden vervaardigd in Duitsland, waar vakmanschap en kwaliteit hoog in het vaandel staan.
-                        </p>
-                    </div>
-                </div>
-    </article>
+    
     <!-- Lets make a section under the USP that shows us the bestsellers, and lest make it in the same way as the popular products on the html file contact.htm
       -->
     <article class="popular">
@@ -252,19 +223,112 @@ Responsive and clean design -->
                     </div>
                 </div>
     </article>
-    <article class="kortingen">
-        <div class="kortingen-content">
-            <h2 class="kortingen-title">Actieprijzen op bureaustoelen</h2>
-            <p class="kortingen-subtitle">Al onze ergonomische bureaustoelen in promo zijn uit voorraad leverbaar tegen scherpe prijzen. De meeste modellen zijn full option, geschikt voor groot en klein, zelfinstellend of meegroeimodel.
+    <article class="usp">
+        <!-- We gaan nu onze USPS hier zetten, enkele die we gaan gebruiken zijn:
+          Made in Germany
+          2 jaar garantie
+          30 dagen proefzitten
+             -->
+                <div class="usp-list">
+                    <div class="usp-item">
+                        <h3 class="usp-title">Made in Germany</h3>
+                        <p> 
+                            Onze bureaustoelen worden vervaardigd in Duitsland, waar vakmanschap en kwaliteit hoog in het vaandel staan.
+                        </p>
+                    </div>
+                    <div class="usp-item">
+                        <h3 class="usp-title">Made in Germany</h3>
+                        <p> 
+                            Onze bureaustoelen worden vervaardigd in Duitsland, waar vakmanschap en kwaliteit hoog in het vaandel staan.
+                        </p>
+                    </div>
+                    <div class="usp-item">
+                        <h3 class="usp-title">Made in Germany</h3>
+                        <p> 
+                            Onze bureaustoelen worden vervaardigd in Duitsland, waar vakmanschap en kwaliteit hoog in het vaandel staan.
+                        </p>
+                    </div>  
+                </div>
+    </article>
+<article class="kortingen-section">
+    <div class="kortingen-inner">
 
-            Kom vrijblijvend testen in onze toonzaal met meer dan 30 verschillende modellen, waar een ergonomie-expert u persoonlijk adviseert. Dankzij onze ruime, reeds gemonteerde voorraad kunt u uw stoel direct meenemen.
-
-            Bestelt u online? Dan zorgen wij voor gratis montage en levering in heel België en Nederland. Vind vandaag nog de ergonomische bureaustoel die écht bij u past!</p>
-            <a href="#" class="btn btn-kortingen">Bekijk kortingen</a>
+        <div class="kortingen-header">
+            <span class="kortingen-eyebrow">Tijdelijke acties</span>
+            <h2 class="kortingen-title">Actieprijzen op<br><span>ergonomische stoelen</span></h2>
         </div>
 
-    </article>
+        <p class="kortingen-beschrijving">
+            Al onze ergonomische bureaustoelen in promo zijn uit voorraad leverbaar tegen scherpe prijzen.
+            De meeste modellen zijn full option — geschikt voor groot en klein, zelfinstellend of meegroeimodel.
+            Kom vrijblijvend testen in onze toonzaal met meer dan 30 modellen, waar een ergonomie-expert u persoonlijk adviseert.
+            Bestelt u online? Dan zorgen wij voor gratis montage en levering in heel België en Nederland.
+        </p>
+
+        <div class="kortingen-cta">
+            <a href="#" class="btn-teal-full">Bekijk alle acties</a>
+            <a href="#" class="btn-outline-dark">Plan showroombezoek</a>
+        </div>
+
+    </div>
+</article>
+<article class="reviews-container">
+    <h2 class="review-title">Wat vinden onze klanten:</h2>
+    <div class="reviews">
+            <div class="review">
+                    <div class="pfp">
+                        <img src="" alt="pfp-reviewer">
+                    </div>
+                    <div class="review-stars">
+                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
+                        <img src="IMG/star-solid.png" alt="star-review"class="review-star">
+                        <img src="IMG/star-solid.png" alt="star-review"class="review-star">
+                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
+                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
+                        <img src="IMG/star-solid.png" alt="star-review" class="review-star"></div>
+                    <div class="review-content">
+                        <p class="review-text">"Ik ben zeer tevreden met mijn nieuwe bureaustoel van Interstuhl. Het comfort is geweldig en de kwaliteit is uitstekend."</p>
+                        <p class="review-name">John Doe</p>
+                </div>
+            </div> 
+            <div class="review">
+                    <div class="pfp">
+                        <img src="" alt="pfp-reviewer">
+                    </div>
+                    <div class="review-stars">
+                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
+                        <img src="IMG/star-solid.png" alt="star-review"class="review-star">
+                        <img src="IMG/star-solid.png" alt="star-review"class="review-star">
+                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
+                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
+                        <img src="IMG/star-solid.png" alt="star-review" class="review-star"></div>
+                    <div class="review-content">
+                        <p class="review-text">"Ik ben zeer tevreden met mijn nieuwe bureaustoel van Interstuhl. Het comfort is geweldig en de kwaliteit is uitstekend."</p>
+                        <p class="review-name">John Doe</p>
+                </div>
+            </div> 
+            <div class="review">
+                    <div class="pfp">
+                        <img src="" alt="pfp-reviewer">
+                    </div>
+                    <div class="review-stars">
+                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
+                        <img src="IMG/star-solid.png" alt="star-review"class="review-star">
+                        <img src="IMG/star-solid.png" alt="star-review"class="review-star">
+                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
+                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
+                        <img src="IMG/star-solid.png" alt="star-review" class="review-star"></div>
+                    <div class="review-content">
+                        <p class="review-text">"Ik ben zeer tevreden met mijn nieuwe bureaustoel van Interstuhl. Het comfort is geweldig en de kwaliteit is uitstekend."</p>
+                        <p class="review-name">John Doe</p>
+                </div>
+            </div> 
+    </div>
+</article>
 </section>
+<footer>
+
+</footer>
 </main>
 </body>
 </html>
