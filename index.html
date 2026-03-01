@@ -22,7 +22,7 @@
     let shown = false;
 
     window.addEventListener("scroll", function(){
-        if (shown && window.scrollY > 300) {
+        if (!shown && window.scrollY > 300) {
             popup.classList.add('visible');
             shown = true;
         }
