@@ -3,27 +3,18 @@
 
 /* ── DESIGN TOKENS ─────────────────────────── */
 :root {
-    --teal:        #00919c;
-    --teal-dark:   #00727A;
-    --background:  #FDFBF8;
-    --black:       #111211;
-    --white:       #f7f8f9;
-    --text:       #201E1F ;
-    --nav-h:       68px;
-}
-
-html {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+    --teal:       #00919c;
+    --teal-dark:  #00727A;
+    --background: #FDFBF8;
+    --black:      #111211;
+    --white:      #f7f8f9;
+    --text:       #201E1F;
+    --gray:       #666;
+    --nav-h:      68px;
 }
 
 *, *:before, *:after {
-    -webkit-box-sizing: inherit;
-    -moz-box-sizing: inherit;
-    box-sizing: inherit;
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
@@ -31,15 +22,9 @@ html {
 
 /* ══════════════════════════════════════════════════════════════
    BUTTONS
-   Overzicht van alle knoppen op de site.
-   Gebruik de juiste klasse op een <a> of <button> element.
 ══════════════════════════════════════════════════════════════ */
 
-/* ── Basis knop ──────────────────────────────────────────────
-   Gedeelde stijl voor alle knoppen. Altijd combineren met
-   een variant-klasse hieronder (bv. .btn.btn-white).
-   Gebruik: <a class="btn btn-white" href="#">Label</a>
-─────────────────────────────────────────────────────────────── */
+/* Basis — altijd combineren met een variant */
 .btn {
     display: inline-block;
     padding: .85rem 2rem;
@@ -55,11 +40,6 @@ html {
     text-decoration: none;
 }
 
-/* ── Witte knop ──────────────────────────────────────────────
-   Witte achtergrond met zwarte tekst. Hover wordt transparant
-   met witte tekst. Bedoeld voor gebruik op donkere/hero-achtergronden.
-   Gebruik: <a class="btn btn-white" href="#">Label</a>
-─────────────────────────────────────────────────────────────── */
 .btn-white {
     background: var(--white);
     color: var(--black);
@@ -70,11 +50,6 @@ html {
     color: var(--white);
 }
 
-/* ── Ghost witte knop ────────────────────────────────────────
-   Transparante achtergrond met witte rand en tekst.
-   Subtielere optie naast .btn-white op hero-secties.
-   Gebruik: <a class="btn btn-ghost-white" href="#">Label</a>
-─────────────────────────────────────────────────────────────── */
 .btn-ghost-white {
     background: transparent;
     color: var(--white);
@@ -84,27 +59,6 @@ html {
     background: rgba(255,255,255,.15);
 }
 
-/* ── Outline knop ────────────────────────────────────────────
-   Transparante achtergrond met teal rand en tekst.
-   Hover vult op met teal. Bedoeld voor lichte secties.
-   Gebruik: <a class="btn btn-outline" href="#">Label</a>
-─────────────────────────────────────────────────────────────── */
-.btn-outline {
-    background: transparent;
-    color: var(--teal);
-    border-color: var(--teal);
-}
-.btn-outline:hover {
-    background: var(--teal);
-    color: var(--white);
-    border-color: var(--teal);
-}
-
-/* ── Volle teal knop (primaire CTA) ─────────────────────────
-   Teal achtergrond met witte tekst en schaduw.
-   Primaire call-to-action knop voor lichte secties.
-   Gebruik: <a class="btn-teal-full" href="#">Label</a>
-─────────────────────────────────────────────────────────────── */
 .btn-teal-full {
     display: inline-block;
     padding: 0.9rem 2.4rem;
@@ -128,11 +82,6 @@ html {
     box-shadow: 0 8px 28px rgba(0,145,156,.35);
 }
 
-/* ── Donkere outline knop ────────────────────────────────────
-   Transparante achtergrond met grijze rand en zwarte tekst.
-   Secondaire CTA naast .btn-teal-full op lichte achtergronden.
-   Gebruik: <a class="btn-outline-dark" href="#">Label</a>
-─────────────────────────────────────────────────────────────── */
 .btn-outline-dark {
     display: inline-block;
     padding: 0.9rem 2.4rem;
@@ -145,7 +94,7 @@ html {
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    border: 2px solid var(--gray-light);
+    border: 2px solid #ccc;
     transition: border-color 0.25s, color 0.25s, background 0.25s;
 }
 .btn-outline-dark:hover {
@@ -154,37 +103,26 @@ html {
     color: var(--white);
 }
 
-/* ── Categorie knop ──────────────────────────────────────────
-   Teal rand met witte achtergrond. Gecentreerd in categoriekaarten.
-   Hover vult op met teal.
-   Gebruik: <a class="btn btn-category" href="#">Bekijk modellen</a>
-─────────────────────────────────────────────────────────────── */
-.btn-category {
-    max-width: 200px;
+.btn-black {
     display: inline-block;
-    padding: 0.75rem 1rem;
-    background: var(--white);
-    color: var(--black);
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    font-size: 1rem;
-    transition: background 0.3s, color 0.3s;
-    text-align: center;
-    cursor: pointer;
-    border: 2px solid var(--teal);
-    margin: 0 auto;
-}
-.btn-category:hover {
-    background: var(--teal);
+    padding: 0.85rem 2.8rem;
+    background: var(--black);
     color: var(--white);
+    text-decoration: none;
+    font-family: 'Funnel Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 2px solid var(--black);
+    border-radius: 4px;
+    transition: background 0.25s, color 0.25s;
+}
+.btn-black:hover {
+    background: transparent;
+    color: var(--black);
 }
 
-/* ── Product knop ────────────────────────────────────────────
-   Volle teal knop voor productkaarten in de bestseller-sectie.
-   Zit onderaan elke productkaart als "Bekijk product" CTA.
-   Gebruik: <a class="btn-product" href="#">Bekijk product</a>
-─────────────────────────────────────────────────────────────── */
 .btn-product {
     display: inline-block;
     padding: 0.75rem 1.25rem;
@@ -211,53 +149,42 @@ html {
 
 
 /* ══════════════════════════════════════════════════════════════
+   LAYOUT
+══════════════════════════════════════════════════════════════ */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
    NAVBAR
 ══════════════════════════════════════════════════════════════ */
 .nav {
     position: fixed;
     top: 0; left: 0; right: 0;
-    background-color: var(--black)  ;
+    background-color: var(--black);
     backdrop-filter: blur(14px);
     border-bottom: 2px solid var(--teal);
     transition: box-shadow .3s;
     z-index: 10;
     padding: .5rem;
-    margin: 0;
 }
 .nav-inner {
     height: 100%;
     margin: 0 5rem;
-    padding: 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     gap: 1rem;
 }
 .nav-inner .nav-menu {
-    margin: 0;
-    padding: 0;
     list-style: none;
     display: flex;
     gap: .3rem;
     justify-content: space-evenly;
     width: 40%;
-}
-.nav-inner .nav-language {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    gap: 0.5rem;
-    color: var(--gray);
-    font-size: 0.75rem;
-    font-family: 'Funnel Sans', sans-serif;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    align-items: center;
-}
-.nav-inner ul li {
-    margin: 0;
-    padding: 0;
 }
 .nav-inner ul li a {
     font-size: clamp(.70rem, .75vw, .82rem);
@@ -273,9 +200,6 @@ html {
 .nav-inner ul li a:hover {
     color: var(--teal);
     opacity: 1;
-}
-.hero-image {
-    flex-shrink: 0;
 }
 .hero-image img {
     height: 60px;
@@ -306,12 +230,7 @@ html {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        160deg,
-        rgba(0,145,156,.08) 0%,
-        rgba(0,0,0,.1) 40%,
-        rgba(0,0,0,.65) 100%
-    );
+    background: linear-gradient(160deg, rgba(0,145,156,.08) 0%, rgba(0,0,0,.1) 40%, rgba(0,0,0,.65) 100%);
 }
 .hero-content {
     position: relative;
@@ -321,7 +240,6 @@ html {
     margin: 0 auto;
     padding: 4rem 2rem;
     color: var(--white);
-    animation: fadeUp .9s ease both;
 }
 .hero-eyebrow {
     font-size: .75rem;
@@ -338,10 +256,6 @@ html {
     line-height: 1.05;
     margin-bottom: 1.2rem;
 }
-.brst {
-    margin-top: 0;
-    padding-top: 0;
-}
 .hero-sub {
     font-size: 1rem;
     font-weight: 300;
@@ -354,39 +268,49 @@ html {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
-    text-decoration: none;
 }
 
 
 /* ══════════════════════════════════════════════════════════════
-   CATEGORIES SECTIE
+   GEDEELDE SECTIE-HEADER STIJL
+   Hergebruikt door: categories, popular, starters, waarom
 ══════════════════════════════════════════════════════════════ */
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 2rem;
+.section-label {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--teal);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+}
+.section-label::before {
+    content: '';
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    background: var(--teal);
 }
 
+
+/* ══════════════════════════════════════════════════════════════
+   CATEGORIES
+══════════════════════════════════════════════════════════════ */
 .categories-section {
     padding: 4rem 0;
     background: var(--background);
 }
-.category-label {
-    font-size: 0.875rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--teal);
-    margin-bottom: 0.5rem;
-}
 .category-title {
     font-size: clamp(1.75rem, 4vw, 2.5rem);
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
     color: var(--black);
 }
 .category-subtitle {
     font-size: 1rem;
     color: var(--gray);
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
     max-width: 600px;
     line-height: 1.6;
 }
@@ -405,7 +329,7 @@ html {
 }
 .category-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
 .category-image {
     width: 100%;
@@ -431,7 +355,7 @@ html {
 }
 .category-name {
     font-size: 1.25rem;
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.75rem;
     color: var(--black);
 }
 .cat-text {
@@ -443,7 +367,7 @@ html {
 
 
 /* ══════════════════════════════════════════════════════════════
-   USP SECTIE
+   USP BALK
 ══════════════════════════════════════════════════════════════ */
 .usp-list {
     display: flex;
@@ -451,60 +375,34 @@ html {
     flex-wrap: wrap;
     justify-content: center;
     background: var(--black);
+    padding: 3rem 2rem;
 }
 .usp-item {
-    background: var(--black);
-    padding: 1.5rem;
-    border-radius: 8px;
     text-align: center;
     flex: 1 1 250px;
     max-width: 300px;
 }
 .usp-title {
     font-size: 1.25rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     color: var(--white);
 }
 .usp-item p {
     font-size: 0.9rem;
-    color: var(--teal-light);
+    color: rgba(247,248,249,0.65);
     line-height: 1.4;
 }
 
 
 /* ══════════════════════════════════════════════════════════════
-   POPULAIRE PRODUCTEN
+   POPULAIRE PRODUCTEN & STARTERSTOELEN
+   .popular is de gedeelde wrapper voor beide secties.
+   .product-card, .product-image, .product-body, .product-name
+   worden hergebruikt in de starterstoelen sectie.
 ══════════════════════════════════════════════════════════════ */
 .popular {
     padding: 6rem 0;
     background: var(--background);
-    position: relative;
-    overflow: hidden;
-}
-.popular::before {
-    content: '';
-    position: absolute;
-    top: -120px; right: -120px;
-    width: 500px; height: 500px;
-    border-radius: 50%;
-    pointer-events: none;
-}
-.popular-label {
-    font-size: 0.78rem;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    color: var(--teal);
-    margin-bottom: 0.6rem;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-.popular-label::before {
-    content: '';
-    display: inline-block;
-    width: 28px; height: 2px;
-    background: var(--teal);
 }
 .popular-title {
     font-size: clamp(1.9rem, 4vw, 2.8rem);
@@ -533,12 +431,12 @@ html {
     position: relative;
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(0, 145, 156, 0.1);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0,145,156,0.1);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
 }
 .product-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 20px 48px rgba(0, 145, 156, 0.15), 0 6px 16px rgba(0,0,0,0.08);
+    box-shadow: 0 20px 48px rgba(0,145,156,0.15), 0 6px 16px rgba(0,0,0,0.08);
 }
 .product-badge {
     position: absolute;
@@ -580,7 +478,7 @@ html {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    border-top: 1px solid rgba(0, 145, 156, 0.08);
+    border-top: 1px solid rgba(0,145,156,0.08);
 }
 .product-name {
     font-size: 1.1rem;
@@ -595,21 +493,134 @@ html {
     margin-bottom: 0.5rem;
 }
 
+/* ── Starterstoelen: links intro + rechts 2 kaarten ── */
+.starters-inner {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5rem;
+    align-items: start;
+}
+.starters-intro {
+    padding-top: 0.5rem;
+}
+.starters-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--teal);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+.starters-body {
+    font-size: 0.92rem;
+    color: var(--gray);
+    line-height: 1.85;
+    margin-bottom: 1rem;
+}
+.starters-divider {
+    width: 40px;
+    height: 2px;
+    background: rgba(0,145,156,0.25);
+    margin: 1.25rem 0;
+}
+.starters-note {
+    font-size: 0.88rem;
+    color: #777;
+    line-height: 1.8;
+}
+.starters-note a {
+    color: var(--teal);
+    font-weight: 600;
+    text-decoration: none;
+}
+.starters-note a:hover { color: var(--teal-dark); }
+
+/* features lijst in starter kaart */
+.product-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 0.5rem;
+}
+.product-features li {
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.5;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.45rem;
+}
+.product-features li::before {
+    content: '+';
+    color: var(--teal);
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
 
 /* ══════════════════════════════════════════════════════════════
-   KORTINGEN SECTIE
+   WAAROM SECTIE
+══════════════════════════════════════════════════════════════ */
+.waarom-section {
+    padding: 6rem 0;
+    background: var(--background);
+}
+.waarom-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+}
+.waarom-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+    font-weight: 400;
+    color: var(--black);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+}
+.waarom-body {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.85;
+    margin-bottom: 1rem;
+}
+.waarom-image {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+}
+.waarom-image::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 10%; bottom: 10%;
+    width: 3px;
+    background: var(--teal);
+    z-index: 2;
+    border-radius: 2px;
+}
+.waarom-image img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+.waarom-image:hover img { transform: scale(1.03); }
+
+
+/* ══════════════════════════════════════════════════════════════
+   KORTINGEN
 ══════════════════════════════════════════════════════════════ */
 .kortingen-section {
     padding: 7rem 2rem;
     background: var(--background);
-    position: relative;
-    overflow: hidden;
 }
 .kortingen-inner {
     max-width: 860px;
     margin: 0 auto;
-    position: relative;
-    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -646,58 +657,16 @@ html {
     color: var(--black);
     line-height: 1.1;
 }
-.kortingen-title span {
-    color: var(--teal);
-}
+.kortingen-title span { color: var(--teal); }
 .kortingen-beschrijving {
     font-size: 1rem;
     color: var(--gray);
     line-height: 1.85;
     text-align: center;
     max-width: 680px;
-    border-top: 1px solid var(--off-white2);
-    border-bottom: 1px solid var(--off-white2);
+    border-top: 1px solid #e8e4de;
+    border-bottom: 1px solid #e8e4de;
     padding: 2rem 0;
-}
-.kortingen-usps {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    width: 100%;
-}
-.kortingen-usp {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    background: var(--white);
-    border: 1px solid var(--off-white2);
-    border-radius: 10px;
-    padding: 1.2rem 1.4rem;
-    transition: border-color 0.25s, box-shadow 0.25s;
-}
-.kortingen-usp:hover {
-    border-color: rgba(0,145,156,.35);
-    box-shadow: 0 4px 16px rgba(0,145,156,.08);
-}
-.kortingen-usp-icon {
-    font-size: 1.4rem;
-    flex-shrink: 0;
-    margin-top: 0.1rem;
-}
-.kortingen-usp-text {
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-}
-.kortingen-usp-title {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--black);
-}
-.kortingen-usp-desc {
-    font-size: 0.8rem;
-    color: var(--gray);
-    line-height: 1.5;
 }
 .kortingen-cta {
     display: flex;
@@ -708,140 +677,11 @@ html {
 
 
 /* ══════════════════════════════════════════════════════════════
-   SCROLL POPUP
-══════════════════════════════════════════════════════════════ */
-.scroll-popup {
-    position: fixed;
-    bottom: 2rem; right: 2rem;
-    width: clamp(250px, 20vw, 300px);
-    min-height: 9rem;
-    background: var(--white);
-    border-radius: 10px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-    padding: 1.5rem;
-    border-left: 3px solid var(--teal);
-    z-index: 999;
-    opacity: 0;
-    transform: translateY(20px);
-    pointer-events: none;
-    transition: opacity 0.35s ease, transform 0.35s ease;
-}
-.scroll-popup.visible {
-    opacity: 1;
-    transform: translateY(0);
-    pointer-events: all;
-}
-.scroll-popup-close {
-    position: absolute;
-    top: 0.75rem; right: 0.75rem;
-    background: none;
-    border: none;
-    font-size: 0.85rem;
-    color: var(--gray);
-    cursor: pointer;
-    line-height: 1;
-    padding: 0.2rem 0.4rem;
-    transition: color 0.2s;
-}
-.scroll-popup-close:hover {
-    color: var(--black);
-}
-.scroll-popup-label {
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
-    color: var(--teal);
-    font-weight: 600;
-    margin-bottom: 0.4rem;
-}
-.scroll-popup-text {
-    font-size: 0.9rem;
-    color: var(--gray);
-    line-height: 1.5;
-    margin-bottom: 1rem;
-}
-.scroll-popup-btn {
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: var(--teal);
-    text-decoration: none;
-    letter-spacing: 0.04em;
-    transition: color 0.2s;
-}
-.scroll-popup-btn:hover {
-    color: var(--teal-dark);
-}
-/* ===============================================================
-    REVIEWS
-================================================================ */
-.review-title {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: var(--teal);
-    margin-bottom: 2rem;
-    text-align: center;
-
-}
-.reviews-container {
-    margin: 0 auto;
-    padding: 0 2rem;
-    background: var(--background);
-}
-.reviews {
-    display: flex;
-    gap: 2rem;
-    padding: 4rem 2rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.review {
-    background: var(--white);
-    border-radius: 10px;
-    padding: 2rem;
-    width: 300px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.review-text {
-    font-size: 0.9rem;
-    color: var(--text);
-    line-height: 1.5;
-}
-.review-name {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-.review-author img {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-.review-star {
-    width: 16px;
-    height: 16px;
-}
-.review-stars {
-    display: flex;
-    gap: 2px;
-    margin: 0;
-    padding: 0;
-}
-.img_pfp_reviewer {
-    width: 100px;
-    height: 40px;
-
-}
-/* ══════════════════════════════════════════════════════════════
-   SERVICES SECTIE
+   SERVICES
 ══════════════════════════════════════════════════════════════ */
 .services-section {
     padding: 6rem 0 5rem;
-    background: var(--off-white);
+    background: var(--background);
 }
 .services-header {
     text-align: center;
@@ -880,8 +720,6 @@ html {
 .service-icon {
     font-size: 1.6rem;
     color: var(--teal);
-    line-height: 1;
-    margin-bottom: 0.25rem;
 }
 .service-name {
     font-size: 0.95rem;
@@ -898,42 +736,128 @@ html {
     display: flex;
     justify-content: center;
 }
-.btn-services-dark {
-    display: inline-block;
-    padding: 0.85rem 2.8rem;
-    background: var(--black);
-    color: var(--white);
-    text-decoration: none;
-    font-family: 'Funnel Sans', sans-serif;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    border: 2px solid var(--black);
-    border-radius: 4px;
-    transition: background 0.25s, color 0.25s;
-}
-.btn-services-dark:hover {
-    background: transparent;
-    color: var(--black);
-}
 
-@media (max-width: 768px) {
-    .services-grid { gap: 2rem 1rem; }
-    .service-item { width: 140px; }
+
+/* ══════════════════════════════════════════════════════════════
+   REVIEWS
+══════════════════════════════════════════════════════════════ */
+.reviews-container {
+    padding: 5rem 2rem;
+    background: var(--background);
 }
+.review-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--teal);
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.reviews {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.review {
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.review-text {
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.5;
+}
+.review-stars {
+    display: flex;
+    gap: 2px;
+}
+.review-star { width: 16px; height: 16px; }
+.img_pfp_reviewer { width: 100px; height: 40px; }
+
+
+/* ══════════════════════════════════════════════════════════════
+   SCROLL POPUP
+══════════════════════════════════════════════════════════════ */
+.scroll-popup {
+    position: fixed;
+    bottom: 2rem; right: 2rem;
+    width: clamp(250px, 20vw, 300px);
+    min-height: 9rem;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    padding: 1.5rem;
+    border-left: 3px solid var(--teal);
+    z-index: 999;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.scroll-popup.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+.scroll-popup-close {
+    position: absolute;
+    top: 0.75rem; right: 0.75rem;
+    background: none;
+    border: none;
+    font-size: 0.85rem;
+    color: var(--gray);
+    cursor: pointer;
+    padding: 0.2rem 0.4rem;
+    transition: color 0.2s;
+}
+.scroll-popup-close:hover { color: var(--black); }
+.scroll-popup-label {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--teal);
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+.scroll-popup-text {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+.scroll-popup-btn {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--teal);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.scroll-popup-btn:hover { color: var(--teal-dark); }
+
+
 /* ══════════════════════════════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════════════════════════════ */
+@media (max-width: 1000px) {
+    .starters-inner { grid-template-columns: 1fr; gap: 3rem; }
+}
 @media (max-width: 900px) {
     .popular-grid { grid-template-columns: repeat(2, 1fr); }
+    .waarom-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .waarom-image img { height: 280px; }
 }
 @media (max-width: 768px) {
     .category-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .service-item { width: 140px; }
 }
 @media (max-width: 620px) {
-    .kortingen-usps { grid-template-columns: 1fr; }
-    .kortingen-cta  { flex-direction: column; align-items: stretch; text-align: center; }
+    .kortingen-cta { flex-direction: column; align-items: stretch; text-align: center; }
 }
 @media (max-width: 520px) {
     .popular-grid { grid-template-columns: 1fr; }

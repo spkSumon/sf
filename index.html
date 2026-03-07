@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/styles.css">
-    <!-- <link rel="icon" type="image/x-icon" href="IMG/favicon-sf.png"> -->
     <title>Interstuhl</title>
 </head>
-<!------ POP-UP SCREEN --------- -->
+
 <div class="scroll-popup" id="scrollPopup">
     <button class="scroll-popup-close" id="popupClose">✕</button>
     <div class="scroll-popup-content">
@@ -16,360 +15,392 @@
         <a href="#" class="scroll-popup-btn">Bekijk collectie →</a>
     </div>
 </div>
+
 <script>
-    const popup = document.getElementById('scrollPopup');
+    const popup   = document.getElementById('scrollPopup');
     const closeBtn = document.getElementById('popupClose');
     let shown = false;
-
-    window.addEventListener("scroll", function(){
-        if (!shown && window.scrollY > 300) {
-            popup.classList.add('visible');
-            shown = true;
-        }
+    window.addEventListener('scroll', function () {
+        if (!shown && window.scrollY > 300) { popup.classList.add('visible'); shown = true; }
     });
-
-    closeBtn.addEventListener("click",function(){
-        popup.classList.remove('visible');
-    })
+    closeBtn.addEventListener('click', function () { popup.classList.remove('visible'); });
 </script>
+
 <body>
-    <header>
-        <!-- Create a modern minimal topbar above the navbar with:
-- Ergonomische showroom
-- Direct uit voorraad leverbaar
-- Gratis verzending
-- 5.0 Google Reviews
-Responsive and clean design -->
-        <!-- <div class="topbar">
-            <div class="container">
-                <p class="topbar-text">Ergonomische showroom | Direct uit voorraad leverbaar | Gratis verzending | 5.0 Google Reviews</p>
+<header>
+    <nav class="nav">
+        <div class="nav-inner">
+            <div class="hero-image">
+                <img src="IMG/logo_sioen_office_furniture.png" alt="logo">
             </div>
-        </div> -->
-        <nav class="nav">
-            <div class="nav-inner">
-                <div class="hero-image">
-                    <img src="IMG/logo_sioen_office_furniture.png" alt="logo">
-                </div>
-                <ul class="nav-menu">
-                    <li><a href="Home">Home</a></li>
-                    <li><a href="Collectie">Collectie</a></li>
-                    <li><a href="Techniekengids">Techniekengids</a></li>
-                    <li><a href="services">Onze Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="Webshop">Webshop</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+            <ul class="nav-menu">
+                <li><a href="Home">Home</a></li>
+                <li><a href="Collectie">Collectie</a></li>
+                <li><a href="Techniekengids">Techniekengids</a></li>
+                <li><a href="services">Onze Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="Webshop">Webshop</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
 <main>
 <section>
+
+    <!-- ── HERO ── -->
     <article class="hero-media">
-            <div class="hero">
-                <img class="hero-img"
-                src="IMG/ergonomische-bureaustoel_foto.webp"
-                alt="Moderne eetkamer">
+        <div class="hero">
+            <img class="hero-img" src="IMG/ergonomische-bureaustoel_foto.webp" alt="Ergonomische bureaustoel">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <p class="hero-eyebrow">Interstuhl Belgie</p>
+                <p class="hero-eyebrow">Interstuhl België</p>
                 <h1 class="hero-title">Ergonomische</h1>
-                <h1 class="hero-title brst">Bureastoelen</h1>
+                <h1 class="hero-title">Bureaustoelen</h1>
                 <p class="hero-sub">Comfort en design, zorgvuldig geselecteerd.</p>
                 <div class="hero-btns">
-                <a href="#collectie" class="btn btn-white">Bekijk onze collectie</a>
-                <a href="#inspiratie" class="btn btn-ghost-white">Webshop</a>
+                    <a href="#collectie" class="btn btn-white">Bekijk onze collectie</a>
+                    <a href="#inspiratie" class="btn btn-ghost-white">Webshop</a>
                 </div>
             </div>
-            </div>
+        </div>
     </article>
+
+    <!-- ── CATEGORIEËN ── -->
     <article class="categories-section">
         <div class="container">
-            <p class="category-label">Onze categorieen</p>
+            <p class="section-label">Onze categorieën</p>
             <h2 class="category-title">Kies uw categorie</h2>
             <p class="category-subtitle">Ontdek onze zorgvuldig geselecteerde categorieën van ergonomische bureaustoelen, ontworpen voor comfort en stijl.</p>
             <div class="category-grid">
-                <!-- Categorie 1: ErgoPlus-bureaustoelen -->
                 <div class="category-card">
-                    <div class="category-image">
-                        <img src="IMG/ErgoPlus-removebg-preview.png" alt="Ergonomische bureaustoel voor kantoor met verstelbare rugleuning en comfortabele zitting">
-                    </div>
+                    <div class="category-image"><img src="IMG/ErgoPlus-removebg-preview.png" alt="ErgoPlus bureaustoel"></div>
                     <div class="category-body">
                         <h3 class="category-name">Ergonomische bureaustoelen (ErgoPlus)</h3>
-                        <p class="cat-text">De ErgoPlus-bureaustoelen zijn ontworpen voor maximale comfort en ergonomie.</p>
-                        <a href="#" class="  btn btn-product">Bekijk modellen</a>
+                        <p class="cat-text">Ontworpen voor maximale comfort en ergonomie.</p>
+                        <a href="#" class="btn-product">Bekijk modellen</a>
                     </div>
                 </div>
-
-                <!-- Categorie 2: 24-uurs bureastoelen -->
                 <div class="category-card">
-                    <div class="category-image">
-                        <img src="IMG/24h_stoelen-removebg-preview.png" alt="24-uurs bureastoelen">
-                    </div>
+                    <div class="category-image"><img src="IMG/24h_stoelen-removebg-preview.png" alt="24-uurs bureaustoelen"></div>
                     <div class="category-body">
-                        <h3 class="category-name">24-uurs bureastoelen</h3>
-                        <p class="cat-text">De 24-uurs bureastoelen zijn ontworpen voor continue gebruik en maximale comfort.</p>
-                        <a href="#" class=" btn btn-product">Bekijk modellen</a>
+                        <h3 class="category-name">24-uurs bureaustoelen</h3>
+                        <p class="cat-text">Ontworpen voor continu gebruik en maximale comfort.</p>
+                        <a href="#" class="btn-product">Bekijk modellen</a>
                     </div>
                 </div>
-
-                <!-- Categorie 3: XL-bureastoelen -->
                 <div class="category-card">
-                    <div class="category-image">
-                        <img src="IMG/XL-stoelen-removebg-preview.png" alt="XL-bureastoelen">
-                    </div>
+                    <div class="category-image"><img src="IMG/XL-stoelen-removebg-preview.png" alt="XL bureaustoelen"></div>
                     <div class="category-body">
-                        <h3 class="category-name">XL-bureastoelen</h3>
-                        <p class="cat-text">De XL-bureastoelen zijn speciaal ontworpen voor extra ruimte en comfort.</p>
-                        <a href="#" class=" btn btn-product">Bekijk modellen</a>
+                        <h3 class="category-name">XL-bureaustoelen</h3>
+                        <p class="cat-text">Speciaal ontworpen voor extra ruimte en comfort.</p>
+                        <a href="#" class="btn-product">Bekijk modellen</a>
                     </div>
                 </div>
-
-                <!-- Categorie 4: directiebureastoelen -->
                 <div class="category-card">
-                    <div class="category-image">
-                        <img src="IMG/Directiestoelen-removebg-preview.png" alt="directiebureastoelen">
-                    </div>
+                    <div class="category-image"><img src="IMG/Directiestoelen-removebg-preview.png" alt="Directiebureaustoelen"></div>
                     <div class="category-body">
-                        <h3 class="category-name">Directiebureastoelen</h3>
-                        <p class="cat-text">De directiebureastoelen zijn ontworpen voor een professionele uitstraling en comfort.</p>
-                        <a href="#" class=" btn btn-product">Bekijk modellen</a>
+                        <h3 class="category-name">Directiebureaustoelen</h3>
+                        <p class="cat-text">Professionele uitstraling gecombineerd met comfort.</p>
+                        <a href="#" class="btn-product">Bekijk modellen</a>
                     </div>
                 </div>
-
-                <!-- Categorie 5: ergonomische gamestoelen -->
                 <div class="category-card">
-                    <div class="category-image">
-                        <img src="IMG/Gamestoel-removebg-preview.png" alt="ergonomische gamestoelen">
-                    </div>
+                    <div class="category-image"><img src="IMG/Gamestoel-removebg-preview.png" alt="Ergonomische gamestoelen"></div>
                     <div class="category-body">
                         <h3 class="category-name">Ergonomische gamestoelen</h3>
-                        <p class="cat-text">De ergonomische gamestoelen zijn ontworpen voor maximale comfort tijdens langdurig spelen.</p>
-                        <a href="#" class="btn btn-product">Bekijk modellen</a>
+                        <p class="cat-text">Maximale comfort tijdens langdurig gebruik.</p>
+                        <a href="#" class="btn-product">Bekijk modellen</a>
                     </div>
                 </div>
-
-                <!-- Categorie 6: ergonomische counterstoelen -->
                 <div class="category-card">
-                    <div class="category-image">
-                        <img src="IMG/Counterstoel-removebg-preview.png" alt="Ergonomische counterstoelen">
-                    </div>
+                    <div class="category-image"><img src="IMG/Counterstoel-removebg-preview.png" alt="Ergonomische counterstoelen"></div>
                     <div class="category-body">
                         <h3 class="category-name">Ergonomische counterstoelen</h3>
-                        <p class="cat-text">De ergonomische counterstoelen zijn ontworpen voor maximale comfort en gebruiksgemak.</p>
-                        <a href="#" class=" btn btn-product">Bekijk modellen</a>
+                        <p class="cat-text">Ontworpen voor maximale comfort en gebruiksgemak.</p>
+                        <a href="#" class="btn-product">Bekijk modellen</a>
                     </div>
                 </div>
             </div>
         </div>
     </article>
-    
-    <!-- Lets make a section under the USP that shows us the bestsellers, and lest make it in the same way as the popular products on the html file contact.htm
-      -->
+
+    <!-- ── BESTSELLERS ── -->
     <article class="popular">
         <div class="container">
-            <p class="popular-label">Onze bestsellers</p>
+            <p class="section-label">Onze bestsellers</p>
             <h2 class="popular-title">Stoelen van het jaar</h2>
             <p class="popular-subtitle">Ontdek onze bestsellers, de meest geliefde ergonomische bureaustoelen die comfort en stijl combineren.</p>
             <div class="popular-grid">
-                <!-- Let's add a tag for each and every product with a teal background and white letters which for example says bestseller or meest gekocht -->
-                <!-- Product 1 -->
                 <div class="product-card">
                     <div class="product-image">
                         <span class="product-badge">⭐ Bestseller</span>
-                        <img src="IMG/ErgoPlus-removebg-preview.png" alt="Ergonomische bureaustoel voor kantoor met verstelbare rugleuning en comfortabele zitting">
+                        <img src="IMG/ErgoPlus-removebg-preview.png" alt="ErgoPlus bureaustoel">
                     </div>
                     <div class="product-body">
                         <h3 class="product-name">ErgoPlus-bureaustoel</h3>
                         <p class="product-price">€299,99</p>
-                        <a href="#" class="btn btn-product">Bekijk product</a>
+                        <a href="#" class="btn-product">Bekijk product</a>
                     </div>
                 </div>
-
-                <!-- Product 2 -->
                 <div class="product-card">
                     <div class="product-image">
-                        <span class="product-badge">🔥 Meest gekochte </span>
-                        <img src="IMG/24h_stoelen-removebg-preview.png" alt="24-uurs bureaustoelen">
+                        <span class="product-badge">🔥 Meest gekocht</span>
+                        <img src="IMG/24h_stoelen-removebg-preview.png" alt="24-uurs bureaustoel">
                     </div>
                     <div class="product-body">
                         <h3 class="product-name">24-uurs bureaustoel</h3>
                         <p class="product-price">€399,99</p>
-                        <a href="#" class="btn btn-product">Bekijk product</a>
+                        <a href="#" class="btn-product">Bekijk product</a>
                     </div>
                 </div>
-
-                <!-- Product 3 -->
                 <div class="product-card">
                     <div class="product-image">
                         <span class="product-badge">✨ Top keuze</span>
-                        <img src="IMG/XL-stoelen-removebg-preview.png" alt="XL-bureastoelen">
+                        <img src="IMG/XL-stoelen-removebg-preview.png" alt="XL bureaustoel">
                     </div>
                     <div class="product-body">
                         <h3 class="product-name">XL-bureaustoel</h3>
                         <p class="product-price">€349,99</p>
-                        <a href="#" class="btn btn-product">Bekijk product</a>
+                        <a href="#" class="btn-product">Bekijk product</a>
                     </div>
                 </div>
-
-                <!-- Product 4 -->
                 <div class="product-card">
                     <div class="product-image">
                         <span class="product-badge">💼 Premium</span>
-                        <img src="IMG/Directiestoelen-removebg-preview.png" alt="directiebureastoelen">
+                        <img src="IMG/Directiestoelen-removebg-preview.png" alt="Directiebureaustoel">
                     </div>
                     <div class="product-body">
                         <h3 class="product-name">Directiebureaustoel</h3>
                         <p class="product-price">€499,99</p>
-                        <a href="#" class="btn btn-product">Bekijk product</a>
+                        <a href="#" class="btn-product">Bekijk product</a>
                     </div>
                 </div>
+            </div>
+        </div>
     </article>
+
+    <!-- ── USP BALK ── -->
     <article class="usp">
-        <!-- We gaan nu onze USPS hier zetten, enkele die we gaan gebruiken zijn:
-          Made in Germany
-          2 jaar garantie
-          30 dagen proefzitten
-             -->
-                <div class="usp-list">
-                    <div class="usp-item">
-                        <h3 class="usp-title">Made in Germany</h3>
-                        <p> 
-                            Onze bureaustoelen worden vervaardigd in Duitsland, waar vakmanschap en kwaliteit hoog in het vaandel staan.
-                        </p>
-                    </div>
-                    <div class="usp-item">
-                        <h3 class="usp-title">Made in Germany</h3>
-                        <p> 
-                            Onze bureaustoelen worden vervaardigd in Duitsland, waar vakmanschap en kwaliteit hoog in het vaandel staan.
-                        </p>
-                    </div>
-                    <div class="usp-item">
-                        <h3 class="usp-title">Made in Germany</h3>
-                        <p> 
-                            Onze bureaustoelen worden vervaardigd in Duitsland, waar vakmanschap en kwaliteit hoog in het vaandel staan.
-                        </p>
-                    </div>  
-                </div>
+        <div class="usp-list">
+            <div class="usp-item">
+                <h3 class="usp-title">Made in Germany</h3>
+                <p>Vervaardigd in Duitsland, waar vakmanschap en kwaliteit centraal staan.</p>
+            </div>
+            <div class="usp-item">
+                <h3 class="usp-title">2 jaar garantie</h3>
+                <p>Elke stoel wordt geleverd met 2 jaar garantie op constructie en bekleding.</p>
+            </div>
+            <div class="usp-item">
+                <h3 class="usp-title">30 dagen proefzitten</h3>
+                <p>Niet tevreden? Retourneer uw stoel binnen 30 dagen zonder extra kosten.</p>
+            </div>
+        </div>
     </article>
-<article class="kortingen-section">
-    <div class="kortingen-inner">
 
-        <div class="kortingen-header">
-            <span class="kortingen-eyebrow">Tijdelijke acties</span>
-            <h2 class="kortingen-title">Actieprijzen op<br><span>ergonomische stoelen</span></h2>
-        </div>
+    <!-- ── STARTERSTOELEN ──
+         Hergebruikt: .popular, .popular-grid, .product-card,
+         .product-image, .product-body, .product-name, .btn-product
+         Nieuw: .starters-inner, .starters-intro, .starters-subtitle,
+                .starters-body, .starters-divider, .starters-note,
+                .product-features
+    ── -->
+    <article class="popular">
+        <div class="container">
+            <div class="starters-inner">
 
-        <p class="kortingen-beschrijving">
-            Al onze ergonomische bureaustoelen in promo zijn uit voorraad leverbaar tegen scherpe prijzen.
-            De meeste modellen zijn full option — geschikt voor groot en klein, zelfinstellend of meegroeimodel.
-            Kom vrijblijvend testen in onze toonzaal met meer dan 30 modellen, waar een ergonomie-expert u persoonlijk adviseert.
-            Bestelt u online? Dan zorgen wij voor gratis montage en levering in heel België en Nederland.
-        </p>
-
-        <div class="kortingen-cta">
-            <a href="#" class="btn-teal-full">Bekijk alle acties</a>
-            <a href="#" class="btn-outline-dark">Plan showroombezoek</a>
-        </div>
-
-    </div>
-</article>
-<article class="services-section">
-    <div class="container">
-        <div class="services-header">
-            <h2 class="services-title">Onze services</h2>
-            <div class="services-divider"></div>
-        </div>
-        <div class="services-grid">
-            <div class="service-item">
-                <div class="service-icon">♥</div>
-                <h3 class="service-name">We-Care</h3>
-                <p class="service-desc">We-Care is ons circulaire basisabonnement van 10 jaar voor het gebruik, de zituren.</p>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">↺</div>
-                <h3 class="service-name">Re-Use</h3>
-                <p class="service-desc">Next Life stoelen. Eersteklas zitcomfort tegen een aantrekkelijke prijs.</p>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">♻</div>
-                <h3 class="service-name">Re-Cycle</h3>
-                <p class="service-desc">Als de stoel echt niet meer bruikbaar is, laten we de stoel lokaal recyclen door een afvalverwerker.</p>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">✎</div>
-                <h3 class="service-name">Re-Design</h3>
-                <p class="service-desc">We revitaliseren onze stoelen via het Re-design programma onder leiding van partner Weder.</p>
-            </div>
-            <div class="service-item">
-                <div class="service-icon">✦</div>
-                <h3 class="service-name">Schoonmaakbeurt</h3>
-                <p class="service-desc">Onze professionele schoonmaakbeurt lost alle soorten vuiligheden voor bij uw bureaustoel.</p>
-            </div>
-        </div>
-        <div class="services-cta">
-            <a href="#" class="btn-services-dark">Meer info</a>
-        </div>
-    </div>
-</article>
-<article class="reviews-container">
-    <h2 class="review-title">Onze Referenties</h2>
-    <div class="reviews">
-            <div class="review">
-                    <div class="pfp">
-                        <img src="IMG/logo_sioen_office_furniture.png" alt="pfp-reviewer" class="img_pfp_reviewer">
-                    </div>
-                    <div class="review-stars">
-                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
-                        <img src="IMG/star-solid.png" alt="star-review"class="review-star">
-                        <img src="IMG/star-solid.png" alt="star-review"class="review-star">
-                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
-                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
-                        <img src="IMG/star-solid.png" alt="star-review" class="review-star"></div>
-                    <div class="review-content">
-                        <p class="review-text">"Ik ben zeer tevreden met mijn nieuwe bureaustoel van Interstuhl. Het comfort is geweldig en de kwaliteit is uitstekend."</p>
-                        <p class="review-name">John Doe</p>
+                <!-- Links: intro tekst -->
+                <div class="starters-intro">
+                    <p class="section-label">Instapmodel</p>
+                    <h2 class="popular-title">Starterstoelen</h2>
+                    <p class="starters-subtitle">Ergonomische bureaustoelen aan een zeer scherpe prijs</p>
+                    <p class="starters-body">
+                        Onze starterstoelen zijn meer dan de "standaard" bureaustoel.
+                        Deze <strong>ergonomische bureaustoelen</strong> zijn uitgevoerd
+                        met de noodzakelijke basisinstelmogelijkheden. Dus: degelijk
+                        zitten, aan een zeer scherpe prijs. De starterstoelen zijn ideaal
+                        voor algemeen thuisgebruik, openbare (computer)werkplekken
+                        en zijn <strong>perfect voor studenten op kot!</strong>
+                    </p>
+                    <div class="starters-divider"></div>
+                    <p class="starters-note">
+                        Toe aan iets meer of wil je gewoon alles uit de Every halen?
+                        Dan raden wij de <a href="#">Every Full Option</a> aan: dezelfde look,
+                        maar een nieuw niveau in ergonomische ondersteuning en zitcomfort.
+                    </p>
                 </div>
-            </div> 
-            <div class="review">
-                    <div class="pfp">
-                        <img src="IMG/logo_sioen_office_furniture.png" alt="pfp-reviewer" class="img_pfp_reviewer">
+
+                <!-- Rechts: 2 productkaarten (hergebruikt) -->
+                <div class="popular-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="IMG/ErgoPlus-removebg-preview.png" alt="Every Starter Net">
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-name">Every Starter — Net</h3>
+                            <ul class="product-features">
+                                <li>Luchtige netbespanning met lendensteun</li>
+                                <li>Voldoet aan ergo-norm NEN-1335</li>
+                                <li>Zeer scherp geprijsd</li>
+                            </ul>
+                            <a href="#" class="btn-product">Lees meer</a>
+                        </div>
                     </div>
-                    <div class="review-stars">
-                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
-                        <img src="IMG/star-solid.png" alt="star-review"class="review-star">
-                        <img src="IMG/star-solid.png" alt="star-review"class="review-star">
-                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
-                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
-                        <img src="IMG/star-solid.png" alt="star-review" class="review-star"></div>
-                    <div class="review-content">
-                        <p class="review-text">"Ik ben zeer tevreden met mijn nieuwe bureaustoel van Interstuhl. Het comfort is geweldig en de kwaliteit is uitstekend."</p>
-                        <p class="review-name">John Doe</p>
-                </div>
-            </div> 
-            <div class="review">
-                    <div class="pfp">
-                        <img src="IMG/logo_sioen_office_furniture.png" alt="pfp-reviewer" class="img_pfp_reviewer">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="IMG/24h_stoelen-removebg-preview.png" alt="Every Starter Stof">
+                        </div>
+                        <div class="product-body">
+                            <h3 class="product-name">Every Starter — Stof</h3>
+                            <ul class="product-features">
+                                <li>Verkrijgbaar in veel verschillende kleuren</li>
+                                <li>Voldoet aan ergo-norm NEN-1335</li>
+                                <li>Zeer scherp geprijsd</li>
+                            </ul>
+                            <a href="#" class="btn-product">Lees meer</a>
+                        </div>
                     </div>
-                    <div class="review-stars">
-                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
-                        <img src="IMG/star-solid.png" alt="star-review"class="review-star">
-                        <img src="IMG/star-solid.png" alt="star-review"class="review-star">
-                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
-                        <img src="IMG/star-solid.png" alt="star-review" class="review-star">
-                        <img src="IMG/star-solid.png" alt="star-review" class="review-star"></div>
-                    <div class="review-content">
-                        <p class="review-text">"Ik ben zeer tevreden met mijn nieuwe bureaustoel van Interstuhl. Het comfort is geweldig en de kwaliteit is uitstekend."</p>
-                        <p class="review-name">John Doe</p>
                 </div>
-            </div> 
-    </div>
-</article>
-<artiicle class="starter_stoelen">
-    
-</artiicle>
+
+            </div>
+        </div>
+    </article>
+
+    <!-- ── KORTINGEN ── -->
+    <article class="kortingen-section">
+        <div class="kortingen-inner">
+            <div class="kortingen-header">
+                <span class="kortingen-eyebrow">Tijdelijke acties</span>
+                <h2 class="kortingen-title">Actieprijzen op<br><span>ergonomische stoelen</span></h2>
+            </div>
+            <p class="kortingen-beschrijving">
+                Al onze ergonomische bureaustoelen in promo zijn uit voorraad leverbaar tegen scherpe prijzen.
+                De meeste modellen zijn full option — geschikt voor groot en klein, zelfinstellend of meegroeimodel.
+                Kom vrijblijvend testen in onze toonzaal met meer dan 30 modellen, waar een ergonomie-expert u persoonlijk adviseert.
+                Bestelt u online? Dan zorgen wij voor gratis montage en levering in heel België en Nederland.
+            </p>
+            <div class="kortingen-cta">
+                <a href="#" class="btn-teal-full">Bekijk alle acties</a>
+                <a href="#" class="btn-outline-dark">Plan showroombezoek</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- ── WAAROM ── -->
+    <article class="waarom-section">
+        <div class="container">
+            <div class="waarom-inner">
+                <div class="waarom-text">
+                    <p class="section-label">Ergonomie &amp; kwaliteit</p>
+                    <h2 class="waarom-title">Waarom kopen bij Interstuhl?</h2>
+                    <p class="waarom-body">
+                        Tegenwoordig brengen mensen steeds meer tijd al zittend door. Dit vereist een hoge
+                        expertise in het ontwerp en de fabricage van bureaustoelen. Interstuhl is een Duits
+                        familiebedrijf dat voornamelijk op ergonomische bureaustoelen focust. Ze creëren
+                        ergonomische bureaustoelen voor elk gebruik en in elke prijsklasse met een
+                        functioneel ontwerp.
+                    </p>
+                    <p class="waarom-body">
+                        Ergonomische stoelen kunnen vrij ingesteld worden zodat deze optimaal aan ieders
+                        formaat kan worden afgestemd. Bovendien voorzien ze in de nodige ondersteuning
+                        voor een actieve zithouding. De stoelen zijn zo gemaakt dat de gebruiker optimaal
+                        zitcomfort ervaart.
+                    </p>
+                    <a href="#" class="btn-teal-full" style="margin-top:1.5rem">Ergonomiegids</a>
+                </div>
+                <div class="waarom-image">
+                    <img src="IMG/ergonomische-bureaustoel_foto.webp" alt="Ergonomische bureaustoel in gebruik">
+                </div>
+            </div>
+        </div>
+    </article>
+
+    <!-- ── SERVICES ── -->
+    <article class="services-section">
+        <div class="container">
+            <div class="services-header">
+                <h2 class="services-title">Onze services</h2>
+                <div class="services-divider"></div>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">♥</div>
+                    <h3 class="service-name">We-Care</h3>
+                    <p class="service-desc">Ons circulaire basisabonnement van 10 jaar voor het gebruik en de zituren.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">↺</div>
+                    <h3 class="service-name">Re-Use</h3>
+                    <p class="service-desc">Next Life stoelen. Eersteklas zitcomfort tegen een aantrekkelijke prijs.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">♻</div>
+                    <h3 class="service-name">Re-Cycle</h3>
+                    <p class="service-desc">Als de stoel echt niet meer bruikbaar is, laten we hem lokaal recyclen.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">✎</div>
+                    <h3 class="service-name">Re-Design</h3>
+                    <p class="service-desc">We revitaliseren onze stoelen via het Re-design programma met partner Weder.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">✦</div>
+                    <h3 class="service-name">Schoonmaakbeurt</h3>
+                    <p class="service-desc">Onze professionele schoonmaakbeurt lost alle soorten vuiligheid op.</p>
+                </div>
+            </div>
+            <div class="services-cta">
+                <a href="#" class="btn-black">Meer info</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- ── REVIEWS ── -->
+    <article class="reviews-container">
+        <h2 class="review-title">Onze Referenties</h2>
+        <div class="reviews">
+            <div class="review">
+                <img src="IMG/logo_sioen_office_furniture.png" alt="reviewer" class="img_pfp_reviewer">
+                <div class="review-stars">
+                    <img src="IMG/star-solid.png" alt="ster" class="review-star">
+                    <img src="IMG/star-solid.png" alt="ster" class="review-star">
+                    <img src="IMG/star-solid.png" alt="ster" class="review-star">
+                    <img src="IMG/star-solid.png" alt="ster" class="review-star">
+                    <img src="IMG/star-solid.png" alt="ster" class="review-star">
+                </div>
+                <p class="review-text">"Ik ben zeer tevreden met mijn nieuwe bureaustoel van Interstuhl. Het comfort is geweldig en de kwaliteit is uitstekend."</p>
+                <p class="review-name">John Doe</p>
+            </div>
+            <div class="review">
+                <img src="IMG/logo_sioen_office_furniture.png" alt="reviewer" class="img_pfp_reviewer">
+                <div class="review-stars">
+                    <img src="IMG/star-solid.png" alt="ster" class="review-star">
+                    <img src="IMG/star-solid.png" alt="ster" class="review-star">
+                    <img src="IMG/star-solid.png" alt="ster" class="review-star">
+                    <img src="IMG/star-solid.png" alt="ster" class="review-star">
+                    <img src="IMG/star-solid.png" alt="ster" class="review-star">
+                </div>
+                <p class="review-text">"Uitstekende service en snelle levering. De stoel staat prachtig in ons kantoor."</p>
+                <p class="review-name">Jane Doe</p>
+            </div>
+            <div class="review">
+                <img src="IMG/logo_sioen_office_furniture.png" alt="reviewer" class="img_pfp_reviewer">
+                <div class="review-stars">
+                    <img src="IMG/star-solid.png" alt="ster" class="review-star">
+                    <img src="IMG/star-solid.png" alt="ster" class="review-star">
+                    <img src="IMG/star-solid.png" alt="ster" class="review-star">
+                    <img src="IMG/star-solid.png" alt="ster" class="review-star">
+                    <img src="IMG/star-solid.png" alt="ster" class="review-star">
+                </div>
+                <p class="review-text">"Na jaren rugklachten eindelijk verlost dankzij de ErgoPlus. Aanrader voor iedereen!"</p>
+                <p class="review-name">Pieter V.</p>
+            </div>
+        </div>
+    </article>
+
 </section>
-<footer>
-
-</footer>
 </main>
+
+<footer></footer>
 </body>
 </html>
