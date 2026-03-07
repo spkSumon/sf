@@ -1,0 +1,40 @@
+{
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
+    "autoprefixer": "^10.4.27",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.1"
+  },
+  "name": "sf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "detect-libc": "^2.1.2",
+    "enhanced-resolve": "^5.20.0",
+    "graceful-fs": "^4.2.11",
+    "jiti": "^2.6.1",
+    "lightningcss": "^1.31.1",
+    "lightningcss-win32-x64-msvc": "^1.31.1",
+    "magic-string": "^0.30.21",
+    "nanoid": "^3.3.11",
+    "picocolors": "^1.1.1",
+    "source-map-js": "^1.2.1",
+    "tapable": "^2.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spkSumon/sf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/spkSumon/sf/issues"
+  },
+  "homepage": "https://github.com/spkSumon/sf#readme"
+}

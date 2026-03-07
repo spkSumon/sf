@@ -860,6 +860,92 @@ html {
     padding: 0;
 }
 /* ══════════════════════════════════════════════════════════════
+   SERVICES SECTIE
+══════════════════════════════════════════════════════════════ */
+.services-section {
+    padding: 6rem 0 5rem;
+    background: var(--off-white);
+}
+.services-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.services-title {
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    font-weight: 700;
+    color: var(--black);
+}
+.services-divider {
+    width: 60px;
+    height: 3px;
+    background: var(--teal);
+    border-radius: 2px;
+}
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem 1.5rem;
+    margin-bottom: 3.5rem;
+}
+.service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 180px;
+    gap: 0.75rem;
+}
+.service-icon {
+    font-size: 1.6rem;
+    color: var(--teal);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+}
+.service-name {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--black);
+    letter-spacing: 0.02em;
+}
+.service-desc {
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.6;
+}
+.services-cta {
+    display: flex;
+    justify-content: center;
+}
+.btn-services-dark {
+    display: inline-block;
+    padding: 0.85rem 2.8rem;
+    background: var(--black);
+    color: var(--white);
+    text-decoration: none;
+    font-family: 'Funnel Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border: 2px solid var(--black);
+    border-radius: 4px;
+    transition: background 0.25s, color 0.25s;
+}
+.btn-services-dark:hover {
+    background: transparent;
+    color: var(--black);
+}
+
+@media (max-width: 768px) {
+    .services-grid { gap: 2rem 1rem; }
+    .service-item { width: 140px; }
+}
+/* ══════════════════════════════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════════════════════════════ */
 @media (max-width: 900px) {
