@@ -4,14 +4,11 @@
 /* ── DESIGN TOKENS ─────────────────────────── */
 :root {
     --teal:        #00919c;
-    --teal-dark:   #007580;
-    --teal-light:  #e0f4f5;
+    --teal-dark:   #00727A;
+    --background:  #FDFBF8;
     --black:       #111211;
-    --off-white:   #F7F5F0;
-    --off-white2:  #EEE9E0;
     --white:       #f7f8f9;
-    --gray:        #7A7672;
-    --gray-light:  #D9D4CC;
+    --text:       #201E1F ;
     --nav-h:       68px;
 }
 
@@ -219,7 +216,7 @@ html {
 .nav {
     position: fixed;
     top: 0; left: 0; right: 0;
-    background: black;
+    background-color: var(--black)  ;
     backdrop-filter: blur(14px);
     border-bottom: 2px solid var(--teal);
     transition: box-shadow .3s;
@@ -372,7 +369,7 @@ html {
 
 .categories-section {
     padding: 4rem 0;
-    background: var(--white);
+    background: var(--background);
 }
 .category-label {
     font-size: 0.875rem;
@@ -480,7 +477,7 @@ html {
 ══════════════════════════════════════════════════════════════ */
 .popular {
     padding: 6rem 0;
-    background: var(--off-white);
+    background: var(--background);
     position: relative;
     overflow: hidden;
 }
@@ -490,15 +487,6 @@ html {
     top: -120px; right: -120px;
     width: 500px; height: 500px;
     border-radius: 50%;
-    pointer-events: none;
-}
-.popular::after {
-    content: '';
-    position: absolute;
-    bottom: -80px; left: -80px;
-    width: 350px; height: 350px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0,145,156,.06) 0%, transparent 70%);
     pointer-events: none;
 }
 .popular-label {
@@ -613,27 +601,9 @@ html {
 ══════════════════════════════════════════════════════════════ */
 .kortingen-section {
     padding: 7rem 2rem;
-    background: var(--off-white);
+    background: var(--background);
     position: relative;
     overflow: hidden;
-}
-.kortingen-section::before {
-    content: '';
-    position: absolute;
-    top: -180px; right: -100px;
-    width: 500px; height: 500px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0,145,156,.09) 0%, transparent 65%);
-    pointer-events: none;
-}
-.kortingen-section::after {
-    content: '';
-    position: absolute;
-    bottom: -120px; left: -80px;
-    width: 380px; height: 380px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(0,145,156,.07) 0%, transparent 65%);
-    pointer-events: none;
 }
 .kortingen-inner {
     max-width: 860px;
@@ -806,15 +776,17 @@ html {
 ================================================================ */
 .review-title {
     display: block;
-    font-size: 1.75rem;
-    font-weight: 400;
-    color: var(--black);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--teal);
     margin-bottom: 2rem;
+    text-align: center;
+
 }
 .reviews-container {
     margin: 0 auto;
     padding: 0 2rem;
-        background: var(--off-white);
+    background: var(--background);
 }
 .reviews {
     display: flex;
@@ -835,7 +807,7 @@ html {
 }
 .review-text {
     font-size: 0.9rem;
-    color: var(--gray);
+    color: var(--text);
     line-height: 1.5;
 }
 .review-name {
@@ -858,6 +830,11 @@ html {
     gap: 2px;
     margin: 0;
     padding: 0;
+}
+.img_pfp_reviewer {
+    width: 100px;
+    height: 40px;
+
 }
 /* ══════════════════════════════════════════════════════════════
    RESPONSIVE
