@@ -1,20 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interstuhl-collectie</title>
     <link rel="stylesheet" href="CSS/styles.css">
+    <title>Collectie - Interstuhl</title>
 </head>
-<!-- ── SCROLL POPUP ── -->
-<div class="scroll-popup" id="scrollPopup">
-    <button class="scroll-popup-close" id="popupClose">✕</button>
-    <div class="scroll-popup-content">
-        <p class="scroll-popup-label">Gratis verzending</p>
-        <p class="scroll-popup-text">Bestel vandaag en ontvang uw stoel binnen 3-5 werkdagen.</p>
-        <a href="#" class="scroll-popup-btn">Bekijk collectie →</a>
-    </div>
-</div>
+
+<body>
 
 <header>
     <nav class="nav">
@@ -33,7 +26,455 @@
         </div>
     </nav>
 </header>
-<body>
-    
+
+<main>
+
+    <!-- ── COLLECTIE HERO ── -->
+    <section class="collectie-hero">
+        <div class="collectie-hero-overlay"></div>
+        <div class="collectie-hero-content container">
+            <p class="hero-eyebrow">Onze Collectie</p>
+            <h1 class="hero-title">Ergonomische Bureaustoelen</h1>
+            <p class="hero-sub">Speciaal ontworpen om zo ergonomisch mogelijk te zijn.</p>
+        </div>
+    </section>
+
+    <!-- ── FILTER NAVIGATIE ── -->
+    <section class="collectie-filter-section">
+        <div class="container">
+            <div class="collectie-filter-wrap">
+                <a href="#ergonomisch" class="collectie-filter-btn collectie-filter-btn--active">Ergonomische bureaustoelen</a>
+                <a href="#counterstoelen" class="collectie-filter-btn">Counterstoelen</a>
+                <a href="#bezoekers" class="collectie-filter-btn">Bezoekerstoelen</a>
+                <a href="#tafels" class="collectie-filter-btn">Tafels</a>
+                <a href="#labo" class="collectie-filter-btn">Labo- & Industriestoelen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── ERGONOMISCHE BUREAUSTOELEN ── -->
+    <section class="collectie-category" id="ergonomisch">
+        <div class="container">
+            <div class="collectie-category-header">
+                <h2 class="section-title">Ergonomische Bureaustoelen</h2>
+                <p class="section-subtitle">Speciaal ontworpen om zo ergonomisch mogelijk te zijn.</p>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/ErgoPlus-removebg-preview.png" alt="GOAL bureaustoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">GOAL</h3>
+                        <p class="product-text">Beschikbaar met een geïntimeerde rug of met netbespanning.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <span class="product-badge">⭐ Bestseller</span>
+                        <img src="IMG/ErgoPlus-removebg-preview.png" alt="PUREIS3 bureaustoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">PUREIS3</h3>
+                        <p class="product-text">Beschikbaar met een geïntimeerde rug of met netbespanning.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/ErgoPlus-removebg-preview.png" alt="HERO bureaustoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">HERO</h3>
+                        <p class="product-text">Beschikbaar met een geïntimeerde rug of met netbespanning.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/ErgoPlus-removebg-preview.png" alt="AIRPAD bureaustoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">AIRPAD</h3>
+                        <p class="product-text">Enkelt beschikbaar met netbespanning.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/ErgoPlus-removebg-preview.png" alt="JOYCEIS3 bureaustoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">JOYCEIS3</h3>
+                        <p class="product-text">Beschikbaar met een geïntimeerde rug of met netbespanning.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/ErgoPlus-removebg-preview.png" alt="EVERYIS1 bureaustoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">EVERYIS1</h3>
+                        <p class="product-text">Beschikbaar met een geïntimeerde rug of met netbespanning.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── LAATSTE STUKS BANNER ── -->
+    <section class="collectie-banner">
+        <div class="container">
+            <div class="collectie-banner-inner">
+                <div class="collectie-banner-content">
+                    <h3 class="collectie-banner-title">Laatste stuks</h3>
+                    <p class="collectie-banner-text">Profiteer van extra grote kortingen op een interessante selectie uit ons ruime assortiment.</p>
+                    <a href="#" class="btn-teal-full">Direct naar OP=OP →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 24-UURS STOELEN ── -->
+    <section class="collectie-category">
+        <div class="container">
+            <div class="collectie-category-header">
+                <p class="section-label">Voor continu gebruik</p>
+                <h2 class="section-title">24-uurs bureaustoelen</h2>
+                <p class="section-subtitle">Ontworpen voor continu gebruik en maximale comfort.</p>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/24h_stoelen-removebg-preview.png" alt="24h stoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">24h Comfort Pro</h3>
+                        <p class="product-text">Speciaal ontworpen voor langdurig gebruik in shifts.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/24h_stoelen-removebg-preview.png" alt="24h stoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">24h Elite</h3>
+                        <p class="product-text">Maximaal comfort voor 24/7 werkomgevingen.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/24h_stoelen-removebg-preview.png" alt="24h stoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">24h Advanced</h3>
+                        <p class="product-text">Geavanceerde ergonomie voor continu gebruik.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── XL STOELEN ── -->
+    <section class="collectie-category">
+        <div class="container">
+            <div class="collectie-category-header">
+                <p class="section-label">Extra ruimte</p>
+                <h2 class="section-title">XL-bureaustoelen</h2>
+                <p class="section-subtitle">Speciaal ontworpen voor extra ruimte en comfort.</p>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/XL-stoelen-removebg-preview.png" alt="XL stoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">XL Comfort</h3>
+                        <p class="product-text">Ruime zitting met extra stevige ondersteuning.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/XL-stoelen-removebg-preview.png" alt="XL stoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">XL Premium</h3>
+                        <p class="product-text">Premium comfort voor gebruikers tot 150kg.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/XL-stoelen-removebg-preview.png" alt="XL stoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">XL Executive</h3>
+                        <p class="product-text">Luxe uitvoering met extra brede zitting.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── DIRECTIESTOELEN ── -->
+    <section class="collectie-category">
+        <div class="container">
+            <div class="collectie-category-header">
+                <p class="section-label">Professioneel</p>
+                <h2 class="section-title">Directiebureaustoelen</h2>
+                <p class="section-subtitle">Professionele uitstraling gecombineerd met comfort.</p>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <span class="product-badge">💼 Premium</span>
+                        <img src="IMG/Directiestoelen-removebg-preview.png" alt="Directiestoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">Executive Leather</h3>
+                        <p class="product-text">Luxe leren uitvoering voor de moderne directie.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/Directiestoelen-removebg-preview.png" alt="Directiestoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">Director Pro</h3>
+                        <p class="product-text">Professionele uitstraling met ergonomisch comfort.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/Directiestoelen-removebg-preview.png" alt="Directiestoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">Management Plus</h3>
+                        <p class="product-text">Stijlvolle uitstraling voor elke werkomgeving.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── GAMESTOELEN ── -->
+    <section class="collectie-category">
+        <div class="container">
+            <div class="collectie-category-header">
+                <p class="section-label">Gaming</p>
+                <h2 class="section-title">Ergonomische gamestoelen</h2>
+                <p class="section-subtitle">Maximale comfort tijdens langdurig gebruik.</p>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/Gamestoel-removebg-preview.png" alt="Gamestoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">Gamer Pro</h3>
+                        <p class="product-text">Ontworpen voor urenlange gaming sessies.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/Gamestoel-removebg-preview.png" alt="Gamestoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">Gaming Elite</h3>
+                        <p class="product-text">Premium comfort voor professionele gamers.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── COUNTERSTOELEN ── -->
+    <section class="collectie-category">
+        <div class="container">
+            <div class="collectie-category-header">
+                <p class="section-label">Voor hoge werkplekken</p>
+                <h2 class="section-title">Ergonomische counterstoelen</h2>
+                <p class="section-subtitle">Ontworpen voor maximale comfort en gebruiksgemak.</p>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/Counterstoel-removebg-preview.png" alt="Counterstoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">Counter Basic</h3>
+                        <p class="product-text">Eenvoudig en comfortabel voor hoge werkplekken.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/Counterstoel-removebg-preview.png" alt="Counterstoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">Counter Plus</h3>
+                        <p class="product-text">Ergonomische ondersteuning op elke hoogte.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="IMG/Counterstoel-removebg-preview.png" alt="Counterstoel">
+                    </div>
+                    <div class="product-body">
+                        <h3 class="product-name">Counter Premium</h3>
+                        <p class="product-text">Luxe uitvoering voor professioneel gebruik.</p>
+                        <a href="#" class="btn-product">Meer info</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA SECTIE ── -->
+    <section class="collectie-cta-section">
+        <div class="container">
+            <div class="collectie-cta-inner">
+                <h2 class="collectie-cta-title">Hulp nodig bij het kiezen?</h2>
+                <p class="collectie-cta-text">Onze ergonomie-experts helpen u graag met het vinden van de perfecte bureaustoel voor uw situatie.</p>
+                <div class="collectie-cta-btns">
+                    <a href="contact.html" class="btn-teal-full">Neem contact op</a>
+                    <a href="#" class="btn-outline-dark">Plan showroombezoek</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer-grid">
+
+            <!-- Kolom 1: Logo + beschrijving -->
+            <div class="footer-col footer-col--brand">
+                <img src="IMG/logo_sioen_office_furniture.png" alt="Sioen Office & Furniture" class="footer-logo">
+                <p>Wij zijn de specialist inzake kantoorinrichting, ergonomie en de inrichting van uw huis. Door de jarenlange ervaring beschikken we over de juiste expertise om u bij te staan in het ontwerp van uw werkomgeving of woning. U kunt ons gerust <a href="contact.html">contacteren</a> voor enige vragen of als u iets wilt bestellen.</p>
+            </div>
+
+            <!-- Kolom 2: Contact -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Contact</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <span class="footer-contact-icon">📞</span>
+                        <a href="tel:+3216468041">+32 16 46 80 41</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">✉</span>
+                        <a href="mailto:info@sioenfurniture.be">info@sioenfurniture.be</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">📍</span>
+                        <span>Bierbeekstraat 18<br>3360 Bierbeek, België</span>
+                    </li>
+                </ul>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">
+                        <img src="IMG/icon-facebook.png" alt="Facebook">
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <img src="IMG/icon-instagram.png" alt="Instagram">
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <img src="IMG/icon-youtube.png" alt="YouTube">
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <img src="IMG/icon-linkedin.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <div class="footer-subheading">Onze andere websites</div>
+                <ul class="footer-links">
+                    <li><a href="#">Sioenfurniture.be</a></li>
+                    <li><a href="#">Sioenoffice.be</a></li>
+                    <li><a href="#">Ergonomischestoelen.be</a></li>
+                    <li><a href="#">Conen.be</a></li>
+                    <li><a href="#">Prosedia-belgie.be</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Openingsuren -->
+            <div class="footer-col">
+                <h4 class="footer-heading">Openingsuren showroom</h4>
+                <p class="footer-openingsuren-sub"><em>Wij zijn open, zonder afspraak, voor <strong>bedrijven</strong> en <strong>particulieren</strong>:</em></p>
+                <table class="footer-uren">
+                    <tr class="footer-uren--highlight">
+                        <td>Ma</td>
+                        <td>09:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Di</td>
+                        <td>09:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Wo</td>
+                        <td>09:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Do</td>
+                        <td>09:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Vr</td>
+                        <td>09:00 - 17:00</td>
+                    </tr>
+                    <tr>
+                        <td>Za</td>
+                        <td>10:00 - 17:00</td>
+                    </tr>
+                    <tr>
+                        <td>Zo</td>
+                        <td>Gesloten</td>
+                    </tr>
+                </table>
+                <a href="#" class="footer-afwijkend">Afwijkende openingsuren</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Sioen Office & Furniture. Alle rechten voorbehouden.</p>
+        </div>
+    </div>
+</footer>
+
 </body>
 </html>

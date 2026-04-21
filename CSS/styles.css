@@ -8,8 +8,8 @@
     --teal-light: #e0f5f6;   /* Lichte tint voor achtergronden/hover */
 
     /* Achtergronden */
-    --background: #F7EDDE;   /* Warme achtergrond */
-    --white:      #FDFBF8;   /* Lichtste achtergrond */
+    --background: #FDFBF8;   /* Warme achtergrond */
+    --white:      #fff;   /* Lichtste achtergrond */
 
     /* Tekst */
     --text:       #201E1F;   /* Hoofdtekst */
@@ -1543,8 +1543,560 @@ body {
 .scroll-popup-btn:hover {
     color: var(--teal-dark);
 }
+/* ══════════════════════════════════════════════════════════════
+   COLLECTIE PAGINA STYLES
+══════════════════════════════════════════════════════════════ */
+
+/* ── Collectie Hero ── */
+.collectie-hero {
+    padding: 8rem 0 6rem;
+    background: var(--background);
+    position: relative;
+}
+.collectie-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 60px;
+    background: var(--gray-light);
+}
+
+.collectie-hero-content {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* ── Filter Navigatie ── */
+.collectie-filter-section {
+    background: var(--white);
+    padding: 2rem 0;
+    border-top: 1px solid var(--gray-light);
+    border-bottom: 1px solid var(--gray-light);
+    top: var(--nav-h);
+    z-index: 50;
+}
+
+.collectie-filter-wrap {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.collectie-filter-btn {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--gray);
+    background: transparent;
+    border: 1.5px solid var(--gray-light);
+    border-radius: 2px;
+    padding: 0.7rem 1.5rem;
+    transition: all 0.25s var(--ease-out);
+    white-space: nowrap;
+}
+.collectie-filter-btn:hover {
+    border-color: var(--teal);
+    color: var(--teal);
+}
+.collectie-filter-btn--active {
+    background: var(--teal);
+    border-color: var(--teal);
+    color: var(--white);
+}
+
+/* ── Collectie Categorie ── */
+.collectie-category {
+    padding: 6rem 0;
+    background: var(--background);
+}
+.collectie-category:nth-child(even) {
+    background: var(--white);
+}
+
+.collectie-category-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.product-text {
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+    font-weight: 300;
+}
+
+/* ── Laatste Stuks Banner ── */
+.collectie-banner {
+    background: var(--teal-light);
+    padding: 5rem 0;
+    border-top: 1px solid rgba(0,145,156,.15);
+    border-bottom: 1px solid rgba(0,145,156,.15);
+}
+
+.collectie-banner-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.collectie-banner-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+}
+
+.collectie-banner-text {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* ── Vervangonderdelen ── */
+.collectie-onderdelen {
+    background: var(--white);
+    padding: 5rem 0;
+}
+
+.collectie-onderdelen-inner {
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.collectie-onderdelen-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+}
+
+.collectie-onderdelen-text {
+    font-size: 0.88rem;
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* ── CTA Sectie ── */
+.collectie-cta-section {
+    background: var(--background);
+    padding: 6rem 0;
+    border-top: 1px solid var(--gray-light);
+}
+
+.collectie-cta-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.collectie-cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+}
+
+.collectie-cta-text {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+.collectie-cta-btns {
+    display: flex;
+    gap: 0.85rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
 
+/* ══════════════════════════════════════════════════════════════
+   CONTACT PAGINA STYLES
+══════════════════════════════════════════════════════════════ */
+
+/* ── Contact Hero ── */
+.contact-hero {
+    padding: 7rem 0 5rem;
+    background: var(--background);
+    text-align: center;
+}
+
+.contact-hero .section-subtitle {
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ── Contact Grid ── */
+.contact-section {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+}
+
+/* ── Contact Formulier ── */
+.contact-form-wrap {
+    background: var(--background);
+    padding: 3rem 2.5rem;
+    border: 1px solid var(--gray-light);
+}
+
+.contact-form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+.contact-form-intro {
+    font-size: 0.88rem;
+    color: var(--gray);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-input,
+.form-textarea {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    color: var(--text);
+    background: var(--white);
+    border: 1.5px solid var(--gray-light);
+    border-radius: 2px;
+    padding: 0.85rem 1.1rem;
+    transition: border-color 0.2s;
+}
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--teal);
+}
+.form-input::placeholder,
+.form-textarea::placeholder {
+    color: var(--gray);
+    opacity: 0.6;
+}
+
+.form-textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.form-submit {
+    width: 100%;
+    margin-top: 0.5rem;
+}
+
+/* ── Showroom Info ── */
+.contact-showroom-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contact-showroom-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--black);
+    letter-spacing: -0.01em;
+}
+
+.contact-showroom-intro {
+    font-size: 0.88rem;
+    color: var(--gray);
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+.contact-address {
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--gray-light);
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.contact-address-name {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 0.35rem;
+}
+
+.contact-address-city {
+    font-size: 0.88rem;
+    color: var(--gray);
+    font-weight: 300;
+}
+
+.contact-route-btn {
+    align-self: flex-start;
+}
+
+.contact-payment-icons {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.payment-icon {
+    height: 28px;
+    width: auto;
+    object-fit: contain;
+}
+
+.contact-hours {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-hours-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--black);
+}
+
+.contact-hours-subtitle {
+    font-size: 0.85rem;
+    color: var(--teal);
+    font-style: italic;
+    margin-top: -0.5rem;
+}
+
+.contact-hours-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+.contact-hours-table td {
+    padding: 0.5rem 0;
+    color: var(--gray);
+    border-bottom: 1px solid var(--gray-light);
+}
+.contact-hours-table td:first-child {
+    width: 80px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.contact-hours-row--highlight td {
+    color: var(--black);
+}
+
+.contact-hours-link {
+    font-size: 0.82rem;
+    color: var(--teal);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0,145,156,.3);
+    align-self: flex-start;
+    transition: border-color 0.2s;
+}
+.contact-hours-link:hover {
+    border-color: var(--teal);
+}
+
+/* ── Contact Info Grid ── */
+.contact-info-section {
+    padding: 5rem 0;
+    background: var(--background);
+    border-top: 1px solid var(--gray-light);
+}
+
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+}
+
+.contact-info-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    border: 1px solid var(--gray-light);
+}
+
+.contact-info-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 1rem;
+}
+
+.contact-info-text {
+    font-size: 0.88rem;
+    color: var(--gray);
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
+    font-weight: 300;
+}
+
+.contact-info-detail {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+.contact-info-detail a {
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(0,145,156,.3);
+    transition: border-color 0.2s;
+}
+.contact-info-detail a:hover {
+    border-color: var(--teal);
+}
+
+.contact-social-icons {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.contact-social-link {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid var(--gray-light);
+    border-radius: 2px;
+    transition: border-color 0.2s, background 0.2s;
+}
+.contact-social-link:hover {
+    border-color: var(--teal);
+    background: var(--teal-light);
+}
+.contact-social-link img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+/* ── Map Placeholder ── */
+.contact-map-section {
+    background: var(--background);
+}
+
+.contact-map-placeholder {
+    height: 420px;
+    background: linear-gradient(135deg, var(--teal-light) 0%, rgba(0,145,156,.08) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-top: 1px solid rgba(0,145,156,.2);
+}
+
+.contact-map-overlay {
+    text-align: center;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact-map-text {
+    font-size: 1.1rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   RESPONSIVE - COLLECTIE & CONTACT
+══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+    
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .collectie-filter-section {
+        position: static;
+    }
+    
+    .collectie-filter-wrap {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: 0.5rem;
+    }
+    
+    .collectie-filter-btn {
+        font-size: 0.7rem;
+        padding: 0.6rem 1.2rem;
+    }
+}
+
+@media (max-width: 520px) {
+    .contact-form-wrap {
+        padding: 2rem 1.5rem;
+    }
+    
+    .contact-payment-icons {
+        justify-content: center;
+    }
+    
+    .contact-social-icons {
+        justify-content: center;
+    }
+    
+    .collectie-cta-btns {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
 /* ══════════════════════════════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════════════════════════════ */
@@ -1656,5 +2208,260 @@ body {
     }
     .kenmerken-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   TECHNIEKENGIDS PAGINA STYLES
+══════════════════════════════════════════════════════════════ */
+
+.techniekengids-section {
+    padding: 6rem 0;
+    background: var(--white);
+}
+
+.techniekengids-header {
+    background: var(--background);
+    padding: 7rem 0 8rem;
+}
+
+.techniekengids-header-content {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.techniekengids-subtitle {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--teal);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+.techniekengids-subtitle::before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1.5px;
+    background: var(--teal);
+}
+.techniekengids-subtitle::after {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 1.5px;
+    background: var(--teal);
+}
+
+.techniekengids-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+    line-height: 1.15;
+}
+
+.techniekengids-intro {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.8;
+    font-weight: 300;
+    max-width: 700px;
+}
+
+/* ── Section Title ── */
+.techniek-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 400;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+}
+
+.techniek-section-desc {
+    font-size: 0.9rem;
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+}
+
+/* ══════════════════════════════════════════════════════════════
+   TABLE STYLING
+══════════════════════════════════════════════════════════════ */
+
+.techniek-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+}
+
+.techniek-table thead {
+    background: var(--teal);
+    color: var(--white);
+}
+
+.techniek-table th {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 600;
+    line-height: 1.3;
+    border-right: 1px solid rgba(255,255,255,.1);
+}
+.techniek-table th:last-child {
+    border-right: none;
+}
+
+.techniek-table td {
+    padding: 1.25rem;
+    vertical-align: top;
+    border-bottom: 1px solid var(--gray-light);
+    border-right: 1px solid var(--gray-light);
+}
+.techniek-table td:last-child {
+    border-right: none;
+}
+.techniek-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Alternating row backgrounds */
+.techniek-table tbody tr:nth-child(even) {
+    background: #f9f7f3;
+}
+
+.techniek-table tbody tr:hover {
+    background: rgba(0,145,156,.04);
+}
+
+/* ── Column Sizing ── */
+.techniek-name {
+    width: 25%;
+    font-weight: 600;
+    color: var(--black);
+    font-size: 0.9rem;
+    letter-spacing: -0.01em;
+}
+
+.techniek-desc {
+    width: 75%;
+    color: var(--gray);
+    font-size: 0.88rem;
+    line-height: 1.75;
+    font-weight: 300;
+}
+
+
+/* ══════════════════════════════════════════════════════════════
+   TECHNIEKENGIDS - RESPONSIVE
+══════════════════════════════════════════════════════════════ */
+
+@media (max-width: 900px) {
+    .techniekengids-section {
+        padding: 5rem 0;
+    }
+    
+    .techniekengids-header {
+        padding: 5rem 0 6rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .techniekengids-title {
+        font-size: clamp(1.6rem, 4vw, 2.2rem);
+    }
+    
+    .techniek-section-title {
+        font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    }
+    
+    /* Stack table on mobile */
+    .techniek-table thead {
+        display: none;
+    }
+    
+    .techniek-table,
+    .techniek-table tbody,
+    .techniek-table tr {
+        display: block;
+        width: 100%;
+    }
+    
+    .techniek-table tbody tr {
+        margin-bottom: 1.5rem;
+        border: 1px solid var(--gray-light);
+        background: var(--white) !important;
+    }
+    
+    .techniek-table tbody tr:hover {
+        background: var(--white) !important;
+        box-shadow: 0 4px 12px rgba(0,0,0,.06);
+    }
+    
+    .techniek-table td {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid var(--gray-light);
+        padding: 1rem 1.25rem;
+    }
+    .techniek-table td:last-child {
+        border-bottom: none;
+    }
+    
+    .techniek-name {
+        width: 100%;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: var(--black);
+        margin-bottom: 0.5rem;
+        padding-bottom: 0;
+        border-bottom: 2px solid var(--teal) !important;
+    }
+    
+    .techniek-desc {
+        width: 100%;
+        font-size: 0.85rem;
+        line-height: 1.7;
+        color: var(--gray);
+        margin-top: 0.75rem;
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 520px) {
+    .techniekengids-header {
+        padding: 4rem 0 5rem;
+    }
+    
+    .techniekengids-intro {
+        font-size: 0.88rem;
+    }
+    
+    .techniek-section-desc {
+        font-size: 0.85rem;
+        margin-bottom: 2rem;
+    }
+    
+    .techniek-table td {
+        padding: 0.9rem 1rem;
     }
 }
