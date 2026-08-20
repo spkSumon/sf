@@ -433,7 +433,6 @@ a.text-link:hover,
     width: 100%;
     height: 260px;
     overflow: hidden;
-    background: var(--teal-light);
 }
 .card-img img {
     height: 100%;
@@ -455,7 +454,7 @@ a.text-link:hover,
 /* .card-img img {
     display: block;
     margin: 0 auto;
-} */
+} */    
 
 .card-body {
     padding: 1.75rem 2rem;
@@ -494,7 +493,6 @@ a.text-link:hover,
 .product-img {
     width: 100%;
     height: 260px;
-    background: var(--teal-light);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -628,7 +626,7 @@ a.text-link:hover,
 
 .usp-item p,
 .duurzaamheid-desc {
-    color: rgba(253,252,250,.5);
+    color: rgba(253,252,250,.82);
     line-height: 1.7;
     font-weight: 300;
 }
@@ -1099,7 +1097,7 @@ a.text-link:hover,
 ══════════════════════════════════════════════════════════════ */
 .footer {
     background: var(--black);
-    color: rgba(253,252,250,.6);
+    color: rgba(253,252,250,.85);
     padding: 5rem 0 0;
     font-size: 0.95rem;
     line-height: 1.75;
@@ -1123,7 +1121,7 @@ a.text-link:hover,
 .footer-col--brand p {
     font-size: 0.95rem;
     line-height: 1.8;
-    color: rgba(253,252,250,.55);
+    color: rgba(253,252,250,.85);
 }
 .footer-heading {
     font-size: 0.98rem;
@@ -1151,11 +1149,11 @@ a.text-link:hover,
     display: flex;
     align-items: flex-start;
     gap: 0.65rem;
-    color: rgba(253,252,250,.6);
+    color: rgba(253,252,250,.85);
 }
 .footer-contact-icon { font-size: 0.95rem; flex-shrink: 0; margin-top: 2px; opacity: 0.7; }
 .footer-contact a {
-    color: rgba(253,252,250,.6);
+    color: rgba(253,252,250,.85);
     text-decoration: none;
     transition: color 0.2s;
 }
@@ -1190,7 +1188,7 @@ a.text-link:hover,
     gap: 0.35rem;
 }
 .footer-links a {
-    color: rgba(253,252,250,.55);
+    color: rgba(253,252,250,.85);
     text-decoration: none;
     transition: color 0.2s;
     font-size: 0.92rem;
@@ -1209,7 +1207,7 @@ a.text-link:hover,
 }
 .footer-uren td {
     padding: 0.45rem 0;
-    color: rgba(253,252,250,.6);
+    color: rgba(253,252,250,.85);
     border-bottom: 1px solid rgba(255,255,255,.05);
 }
 .footer-uren td:first-child {
@@ -1231,7 +1229,7 @@ a.text-link:hover,
 .footer-bottom {
     padding: 1.5rem 0;
     font-size: 0.86rem;
-    color: rgba(253,252,250,.3);
+    color: rgba(253,252,250,.6);
     text-align: center;
 }
 
@@ -1841,4 +1839,96 @@ a.text-link:hover,
     .card-img { height: 220px; }
     .levering-fotos { grid-template-columns: 1fr; }
     .kenmerken-grid { grid-template-columns: 1fr; }
+}
+/* ══════════════════════════════════════════════════════════════
+   ONZE STERKE PUNTEN
+══════════════════════════════════════════════════════════════ */
+.sterke-punten-section { padding: 5rem 0 6rem; background: var(--background); }
+.sterke-punten-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+.sterk-punt-item {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    background: var(--white);
+    border: var(--border);
+    transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+.sterk-punt-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0,0,0,.06);
+}
+.sterk-punt-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 0.75rem;
+}
+.sterk-punt-item p {
+    font-size: 0.95rem;
+    color: var(--gray);
+    line-height: 1.6;
+    font-weight: 300;
+}
+@media (max-width: 900px) {
+    .sterke-punten-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+    .sterke-punten-grid { grid-template-columns: 1fr; }
+}
+
+/* SEO placeholder-tekst onder categoriefoto's */
+.card-text--seo {
+    font-style: italic;
+    color: var(--gray);
+    opacity: 0.7;
+}
+
+/* Google-reviews balk boven referenties */
+.reviews-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1.5rem 0 3rem;
+}
+.reviews-google-stars {
+    color: #FBBC04;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+.reviews-google-score {
+    font-size: 1.1rem;
+    color: var(--black);
+}
+.reviews-google-link {
+    color: var(--teal);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+.reviews-google-link:hover { color: var(--teal-dark); }
+
+/* Opvallende webshopknop in footer */
+.footer-webshop-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background: var(--teal);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    padding: 0.85rem 1.75rem;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.25s var(--ease-out), transform 0.25s var(--ease-out);
+}
+.footer-webshop-btn:hover {
+    background: var(--teal-dark);
+    transform: translateY(-2px);
 }
