@@ -1764,22 +1764,42 @@ a.text-link:hover,
     border: 0;
 }
 
-/* Oude prijs — doorgestreept, gedempt */
+/* Prijsblok — oude prijs boven, nieuwe prijs onder (zoals referentie) */
+.product-price {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+/* Oude prijs — doorgestreept, gedempt, kleiner */
 .product-price s {
     font-size: 0.85em;
     font-weight: 400;
     color: var(--gray);
     text-decoration: line-through;
-    margin-right: 0.35rem;
 }
 
-/* Nieuwe prijs — nadruk, geen underline van <ins> */
+/* Nieuwe prijs — nadruk, groter, geen underline van <ins> */
 .product-price ins {
     text-decoration: none;
     font-weight: 700;
+    font-size: 1.15em;
     color: var(--teal-dark);
 }
 
+/* "excl. btw" suffix — kleiner en lichter dan het bedrag ervoor */
+.price-vat {
+    font-size: 0.7em;
+    font-weight: 400;
+    color: var(--gray);
+    margin-left: 0.25rem;
+}
+
+/* Footer webshop-knop — override .footer-col--brand a (0,1,1 > 0,1,0) */
+.footer-col--brand a.footer-webshop-btn {
+    color: var(--white);
+    border-bottom: none;
+}
 /* ══════════════════════════════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════════════════════════════ */
