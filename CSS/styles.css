@@ -87,15 +87,10 @@ a.text-link:hover,
   margin: 0 auto;
   padding: 0 2.5rem;
 }
-/* LAYOUT COLLECTION */
-collection-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
 /* ══════════════════════════════════════════════════════════════
    BUTTONS
 ══════════════════════════════════════════════════════════════ */
+.btn,
 .btn-teal-full,
 .btn-outline-dark,
 .btn-black,
