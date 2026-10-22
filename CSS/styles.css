@@ -576,7 +576,7 @@ a.text-link:hover,
   color: var(--gray);
   line-height: 1.5;
   display: flex;
-  align-items: flex-start;
+  align-items: -start;
   gap: 0.5rem;
   font-weight: 300;
 }
