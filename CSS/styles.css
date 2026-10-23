@@ -504,11 +504,6 @@ body {
   line-height: 1.6;
   font-weight: 300;
 }
-/* SEO placeholder-tekst onder categoriefoto's */
-.card-text--seo {
-  font-style: italic;
-  opacity: 0.7;
-}
 
 .product-badge {
   position: absolute;
