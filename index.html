@@ -1318,7 +1318,7 @@
           </div>
         </div>
         <div class="footer-bottom">
-          <p>© 2025 Sioen Office &amp; Furniture. Alle rechten voorbehouden.</p>
+          <p>© <span id="footerYear">2025</span> Sioen Office &amp; Furniture. Alle rechten voorbehouden.</p>
         </div>
       </div>
     </footer>
@@ -1335,6 +1335,9 @@
       closeBtn.addEventListener("click", function () {
         popup.classList.remove("visible");
       });
+      // Houd het jaartal in de footer automatisch actueel
+      document.getElementById("footerYear").textContent =
+        new Date().getFullYear();
     </script>
   </body>
 </html>

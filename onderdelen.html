@@ -116,13 +116,6 @@
                   3519/2442/ARTOS1
                 </h3>
 
-                <p class="product-price">
-                  € 57,00
-                  <span style="font-size: 0.7em; font-weight: 400">
-                    excl. btw
-                  </span>
-                </p>
-
                 <p class="product-text">
                   Set wielen voor harde vloeren, geschikt voor Interstuhl
                   modellen 3519, 2442 en ARTOS1.
@@ -148,13 +141,6 @@
                 <h3 class="product-name">
                   Interstuhl set wielen voor harde vloeren, zelfremmend, Ø 65 mm
                 </h3>
-
-                <p class="product-price">
-                  € 69,00
-                  <span style="font-size: 0.7em; font-weight: 400">
-                    excl. btw
-                  </span>
-                </p>
 
                 <p class="product-text">
                   Zelfremmende wielen voor harde vloeren met een diameter van 65
@@ -182,13 +168,6 @@
                   Interstuhl set wielen voor harde vloeren, Ø 65 mm
                 </h3>
 
-                <p class="product-price">
-                  € 57,00
-                  <span style="font-size: 0.7em; font-weight: 400">
-                    excl. btw
-                  </span>
-                </p>
-
                 <p class="product-text">
                   Set wielen voor harde vloeren met een diameter van 65 mm.
                 </p>
@@ -213,13 +192,6 @@
                 <h3 class="product-name">
                   Interstuhl set wielen voor hoogpolig tapijt, Ø 65 mm
                 </h3>
-
-                <p class="product-price">
-                  € 57,00
-                  <span style="font-size: 0.7em; font-weight: 400">
-                    excl. btw
-                  </span>
-                </p>
 
                 <p class="product-text">
                   Set wielen voor hoogpolig tapijt met een diameter van 65 mm.
@@ -262,13 +234,6 @@
                 <h3 class="product-name">
                   Interstuhl 4D armopdekje, per stuk - oud model
                 </h3>
-
-                <p class="product-price">
-                  Vanaf € 42,50
-                  <span style="font-size: 0.7em; font-weight: 400">
-                    excl. btw
-                  </span>
-                </p>
 
                 <p class="product-text">
                   4D armopdekje voor het oude model, verkrijgbaar per stuk.
@@ -314,13 +279,6 @@
                   Interstuhl set 4D armsteunen, zwart - oud model
                 </h3>
 
-                <p class="product-price">
-                  € 140,00
-                  <span style="font-size: 0.7em; font-weight: 400">
-                    excl. btw
-                  </span>
-                </p>
-
                 <p class="product-text">
                   Complete set 4D armsteunen in zwart voor het oude model.
                 </p>
@@ -346,13 +304,6 @@
                   Interstuhl set 4D armsteunen, zwart - nieuw model
                 </h3>
 
-                <p class="product-price">
-                  € 165,00
-                  <span style="font-size: 0.7em; font-weight: 400">
-                    excl. btw
-                  </span>
-                </p>
-
                 <p class="product-text">
                   Complete set 4D armsteunen in zwart voor het nieuwe model.
                 </p>
@@ -377,13 +328,6 @@
                 <h3 class="product-name">
                   Interstuhl set 4D armsteunen, zwart, model Pure
                 </h3>
-
-                <p class="product-price">
-                  € 57,00
-                  <span style="font-size: 0.7em; font-weight: 400">
-                    excl. btw
-                  </span>
-                </p>
 
                 <p class="product-text">
                   Complete set 4D armsteunen in zwart, geschikt voor het
@@ -576,9 +520,14 @@
         <!-- ───────── FOOTER BOTTOM ───────── -->
 
         <div class="footer-bottom">
-          <p>© 2025 Sioen Office & Furniture. Alle rechten voorbehouden.</p>
+          <p>© <span id="footerYear">2025</span> Sioen Office & Furniture. Alle rechten voorbehouden.</p>
         </div>
       </div>
     </footer>
+    <script>
+      // Houd het jaartal in de footer automatisch actueel
+      document.getElementById("footerYear").textContent =
+        new Date().getFullYear();
+    </script>
   </body>
 </html>
