@@ -17,6 +17,7 @@
   --gray-light: #e8e0d4;
 
   --accent: #d58936;
+  --on-dark: rgba(253, 252, 250, 0.85);
 
   --nav-h: 72px;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -48,14 +49,13 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Inline tekstlinks – één regel voor de hele site */
-a.text-link,
-.starters-note a,
-.levering-text a,
-.vrijheid-text a,
-.kenmerk-item a,
-.footer-col--brand a,
-.contact-info-detail a,
+/* Inline tekstlinks – één regel voor de hele site (knoppen hebben een class en vallen erbuiten) */
+.starters-note a:not([class]),
+.levering-text a:not([class]),
+.vrijheid-text a:not([class]),
+.kenmerk-item a:not([class]),
+.footer-col--brand a:not([class]),
+.contact-info-detail a:not([class]),
 .contact-hours-link {
   color: var(--teal);
   font-weight: 500;
@@ -63,13 +63,12 @@ a.text-link,
   border-bottom: var(--link-border);
   transition: border-color 0.2s;
 }
-a.text-link:hover,
-.starters-note a:hover,
-.levering-text a:hover,
-.vrijheid-text a:hover,
-.kenmerk-item a:hover,
-.footer-col--brand a:hover,
-.contact-info-detail a:hover,
+.starters-note a:not([class]):hover,
+.levering-text a:not([class]):hover,
+.vrijheid-text a:not([class]):hover,
+.kenmerk-item a:not([class]):hover,
+.footer-col--brand a:not([class]):hover,
+.contact-info-detail a:not([class]):hover,
 .contact-hours-link:hover {
   border-color: var(--teal);
 }
@@ -94,13 +93,11 @@ a.text-link:hover,
 .btn-teal-full,
 .btn-outline-dark,
 .btn-black,
-.btn-product,
-.bimos-meer-btn {
+.btn-product {
   display: inline-block;
   font-family: "DM Sans", sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
-  /* letter-spacing: 0.1em; */
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
@@ -138,15 +135,13 @@ a.text-link:hover,
 }
 
 .btn-teal-full,
-.btn-product,
-.bimos-meer-btn {
+.btn-product {
   background: var(--teal);
   color: #fff;
   border-color: var(--teal);
 }
 .btn-teal-full:hover,
-.btn-product:hover,
-.bimos-meer-btn:hover {
+.btn-product:hover {
   background: var(--teal-dark);
   border-color: var(--teal-dark);
   transform: translateY(-2px);
@@ -161,11 +156,6 @@ a.text-link:hover,
   padding: 0.75rem 1.3rem;
   font-size: 0.78rem;
   margin-top: auto;
-}
-
-.bimos-meer-btn {
-  padding: 0.95rem 1.5rem;
-  width: 100%;
 }
 
 .btn-outline-dark {
@@ -212,13 +202,24 @@ a.text-link:hover,
   background: var(--teal);
 }
 
-.section-title {
+/* Serif koppen – gedeelde basis */
+.section-title,
+.vrijheid-title,
+.bimos-title,
+.kortingen-title,
+.collectie-banner-title,
+.collectie-cta-title,
+.contact-form-title,
+.contact-showroom-title {
   font-family: "Playfair Display", serif;
-  font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 400;
-  margin-bottom: 1rem;
   color: var(--black);
   letter-spacing: -0.01em;
+}
+
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 1rem;
   line-height: 1.1;
 }
 
@@ -380,7 +381,8 @@ a.text-link:hover,
   position: relative;
   z-index: 2;
   width: 100%;
-  padding: 5rem 0;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
   color: var(--white);
 }
 .hero-eyebrow {
@@ -468,6 +470,9 @@ a.text-link:hover,
 .card-img {
   width: 100%;
   height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 .card-img img {
@@ -478,18 +483,6 @@ a.text-link:hover,
 .card:hover .card-img img {
   transform: scale(1.06);
 }
-
-/* Ensure images inside .card-image are centered without resizing */
-.card-img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-/* .card-img img {
-    display: block;
-    margin: 0 auto;
-} */
 
 .card-body {
   padding: 1.75rem 2rem;
@@ -510,6 +503,11 @@ a.text-link:hover,
   color: var(--gray);
   line-height: 1.6;
   font-weight: 300;
+}
+/* SEO placeholder-tekst onder categoriefoto's */
+.card-text--seo {
+  font-style: italic;
+  opacity: 0.7;
 }
 
 .product-badge {
@@ -558,12 +556,6 @@ a.text-link:hover,
   color: var(--black);
   letter-spacing: -0.01em;
 }
-.product-price {
-  font-size: 1.35rem;
-  font-weight: 700;
-  color: var(--teal-dark);
-  margin-bottom: 0.4rem;
-}
 .product-features {
   list-style: none;
   display: flex;
@@ -576,7 +568,7 @@ a.text-link:hover,
   color: var(--gray);
   line-height: 1.5;
   display: flex;
-  align-items: -start;
+  align-items: flex-start;
   gap: 0.5rem;
   font-weight: 300;
 }
@@ -705,123 +697,7 @@ a.text-link:hover,
 }
 
 /* ══════════════════════════════════════════════════════════════
-   BIMOS
-══════════════════════════════════════════════════════════════ */
-.bimos-section {
-  padding: 6rem 0 7rem;
-  background: var(--white);
-}
-.bimos-title {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(1.8rem, 3vw, 2.6rem);
-  font-weight: 400;
-  color: var(--black);
-  text-align: center;
-  margin-bottom: 1.25rem;
-  letter-spacing: -0.01em;
-}
-.bimos-intro {
-  font-size: 1rem;
-  color: var(--gray);
-  line-height: 1.9;
-  max-width: 920px;
-  margin: 0 auto 4rem;
-  text-align: center;
-  font-weight: 300;
-}
-.bimos-grid {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  gap: 4rem;
-  align-items: center;
-}
-.bimos-chairs-wrap {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  border: var(--border);
-}
-.bimos-chair {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 2.5rem 1.5rem 2rem;
-  border-right: var(--border);
-  border-bottom: var(--border);
-  transition: background 0.3s;
-}
-.bimos-chair:hover {
-  background: var(--teal-light);
-}
-.bimos-chair:nth-child(3n) {
-  border-right: none;
-}
-.bimos-chair:nth-child(n + 4) {
-  border-bottom: none;
-}
-.bimos-chair-img {
-  width: 100%;
-  max-width: 200px;
-  height: 180px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  margin-bottom: 1.25rem;
-}
-.bimos-chair-img img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.08));
-  transition: transform 0.4s var(--ease-out);
-}
-.bimos-chair:hover .bimos-chair-img img {
-  transform: translateY(-6px);
-}
-.bimos-chair-name {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--black);
-  line-height: 1.4;
-}
-.bimos-meer {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1.25rem;
-  width: 240px;
-  flex-shrink: 0;
-}
-.bimos-meer-title {
-  font-family: "Playfair Display", serif;
-  font-size: 1.55rem;
-  font-weight: 400;
-  color: var(--black);
-  line-height: 1.2;
-}
-.bimos-meer-desc {
-  font-size: 0.95rem;
-  color: var(--gray);
-  line-height: 1.7;
-  font-weight: 300;
-}
-.bimos-badges {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  padding-top: 0.75rem;
-  border-top: var(--border);
-  width: 100%;
-}
-.bimos-badges img {
-  height: 36px;
-  width: auto;
-  object-fit: contain;
-}
-
-/* ══════════════════════════════════════════════════════════════
-   LEVERING & AANPASBAAR
+   LEVERING & BIMOS
 ══════════════════════════════════════════════════════════════ */
 .levering-section {
   padding: 6rem 0;
@@ -868,29 +744,28 @@ a.text-link:hover,
   line-height: 1.75;
   font-weight: 300;
 }
-.levering-aanpasbaar {
+.levering-text .btn-black {
+  margin-top: 1rem;
+}
+.bimos {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  align-items: flex-start;
+  gap: 1.5rem;
 }
-.levering-aanpasbaar-title {
-  font-family: "Playfair Display", serif;
+.bimos-title {
   font-size: clamp(1.5rem, 2.5vw, 2.2rem);
-  font-weight: 400;
-  color: var(--black);
-  letter-spacing: -0.01em;
+  line-height: 1.2;
 }
-.levering-fotos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
-}
-.levering-fotos img {
+.bimos-foto {
   width: 100%;
-  height: 210px;
-  object-fit: cover;
+  height: 320px;
+  object-fit: contain;
+  background: var(--white);
+  border: var(--border);
+  padding: 1.5rem;
 }
-.levering-aanpasbaar p {
+.bimos p {
   font-size: 0.975rem;
   color: var(--gray);
   line-height: 1.8;
@@ -911,11 +786,13 @@ a.text-link:hover,
   align-items: center;
   padding: 4rem 0;
 }
-.vrijheid-inner--reverse .vrijheid-text {
-  order: 1;
+/* Lange tekst: foto blijft bovenaan meelopen */
+.vrijheid-inner--top {
+  align-items: start;
 }
-.vrijheid-inner--reverse .vrijheid-img {
-  order: 2;
+.vrijheid-inner--top .vrijheid-img {
+  position: sticky;
+  top: calc(var(--nav-h) + 2rem);
 }
 .vrijheid-divider {
   width: 100%;
@@ -923,25 +800,36 @@ a.text-link:hover,
   background: var(--gray-light);
 }
 .vrijheid-title {
-  font-family: "Playfair Display", serif;
   font-size: clamp(1.6rem, 2.8vw, 2.3rem);
-  font-weight: 400;
-  color: var(--black);
   margin-bottom: 1.5rem;
   line-height: 1.15;
-  letter-spacing: -0.01em;
 }
-.vrijheid-text p {
+.vrijheid-subtitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--black);
+  margin: 1.75rem 0 0.6rem;
+}
+.vrijheid-text p,
+.vrijheid-list li {
   font-size: 0.975rem;
   color: var(--gray);
   line-height: 1.85;
   margin-bottom: 0.85rem;
   font-weight: 300;
 }
+.vrijheid-text strong {
+  color: var(--black);
+  font-weight: 600;
+}
+.vrijheid-list {
+  list-style: none;
+  border-left: 2px solid var(--teal);
+  padding-left: 1.25rem;
+}
 .vrijheid-text .btn-teal-full,
 .waarom-text .btn-teal-full {
   margin-top: 1.5rem;
-  color: #fff;
 }
 .vrijheid-img img {
   width: 100%;
@@ -993,10 +881,7 @@ a.text-link:hover,
   background: var(--teal);
 }
 .kortingen-title {
-  font-family: "Playfair Display", serif;
   font-size: clamp(2.2rem, 5.5vw, 4rem);
-  font-weight: 400;
-  color: var(--black);
   line-height: 1.05;
   letter-spacing: -0.02em;
 }
@@ -1275,7 +1160,7 @@ a.text-link:hover,
 ══════════════════════════════════════════════════════════════ */
 .footer {
   background: var(--black);
-  color: rgba(253, 252, 250, 0.85);
+  color: var(--on-dark);
   padding: 5rem 0 0;
   font-size: 0.95rem;
   line-height: 1.75;
@@ -1297,9 +1182,7 @@ a.text-link:hover,
   opacity: 0.85;
 }
 .footer-col--brand p {
-  font-size: 0.95rem;
   line-height: 1.8;
-  color: rgba(253, 252, 250, 0.85);
 }
 .footer-heading {
   font-size: 0.98rem;
@@ -1327,7 +1210,6 @@ a.text-link:hover,
   display: flex;
   align-items: flex-start;
   gap: 0.65rem;
-  color: rgba(253, 252, 250, 0.85);
 }
 .footer-contact-icon {
   font-size: 0.95rem;
@@ -1336,7 +1218,7 @@ a.text-link:hover,
   opacity: 0.7;
 }
 .footer-contact a {
-  color: rgba(253, 252, 250, 0.85);
+  color: var(--on-dark);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -1378,7 +1260,7 @@ a.text-link:hover,
   gap: 0.35rem;
 }
 .footer-links a {
-  color: rgba(253, 252, 250, 0.85);
+  color: var(--on-dark);
   text-decoration: none;
   transition: color 0.2s;
   font-size: 0.92rem;
@@ -1399,13 +1281,11 @@ a.text-link:hover,
 }
 .footer-uren td {
   padding: 0.45rem 0;
-  color: rgba(253, 252, 250, 0.85);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 .footer-uren td:first-child {
   width: 40px;
   font-weight: 600;
-  color: rgba(253, 252, 250, 0.85);
 }
 .footer-uren--highlight td {
   color: var(--white);
@@ -1520,6 +1400,15 @@ a.text-link:hover,
   max-width: 760px;
   margin: 0 auto;
 }
+.collectie-hero-content .hero-eyebrow,
+.collectie-category-header .section-label {
+  justify-content: center;
+}
+.collectie-hero-content .hero-sub {
+  max-width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .collectie-filter-section {
   background: var(--white);
   padding: 2rem 0;
@@ -1569,6 +1458,9 @@ a.text-link:hover,
   text-align: center;
   margin-bottom: 4rem;
 }
+.container--narrow .collectie-category-header {
+  margin-bottom: 2rem;
+}
 .product-text {
   font-size: 0.95rem;
   color: var(--gray);
@@ -1583,35 +1475,25 @@ a.text-link:hover,
   border-bottom: 1px solid rgba(0, 145, 156, 0.15);
 }
 
-/* Gedeelde "smalle blok"-stijl voor banner / onderdelen / cta */
+/* Gedeelde "smalle blok"-stijl voor banner / cta */
 .collectie-banner-inner,
-.collectie-onderdelen-inner,
 .collectie-cta-inner {
   max-width: 720px;
   margin: 0 auto;
   text-align: center;
 }
 .collectie-banner-title,
-.collectie-onderdelen-title,
 .collectie-cta-title {
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
-  color: var(--black);
   margin-bottom: 1.25rem;
-  letter-spacing: -0.01em;
 }
 .collectie-banner-title {
   font-size: clamp(1.9rem, 3.5vw, 2.8rem);
-}
-.collectie-onderdelen-title {
-  font-size: clamp(1.7rem, 3vw, 2.4rem);
 }
 .collectie-cta-title {
   font-size: clamp(1.9rem, 3.5vw, 3rem);
 }
 
 .collectie-banner-text,
-.collectie-onderdelen-text,
 .collectie-cta-text {
   font-size: 1rem;
   color: var(--gray);
@@ -1621,17 +1503,10 @@ a.text-link:hover,
 .collectie-banner-text {
   margin-bottom: 2rem;
 }
-.collectie-onderdelen-text {
-  margin-bottom: 2rem;
-}
 .collectie-cta-text {
   margin-bottom: 2.5rem;
 }
 
-.collectie-onderdelen {
-  background: var(--white);
-  padding: 5rem 0;
-}
 .collectie-cta-section {
   background: var(--background);
   padding: 6rem 0;
@@ -1674,11 +1549,7 @@ a.text-link:hover,
 }
 .contact-form-title,
 .contact-showroom-title {
-  font-family: "Playfair Display", serif;
   font-size: 2rem;
-  font-weight: 400;
-  color: var(--black);
-  letter-spacing: -0.01em;
 }
 .contact-form-title {
   margin-bottom: 1rem;
@@ -1757,19 +1628,6 @@ a.text-link:hover,
 }
 .contact-route-btn {
   align-self: flex-start;
-}
-.contact-payment-icons {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 1.5rem 0;
-  border-bottom: var(--border);
-}
-.payment-icon {
-  height: 28px;
-  width: auto;
-  object-fit: contain;
 }
 .contact-hours {
   display: flex;
@@ -1899,70 +1757,21 @@ a.text-link:hover,
 /* ══════════════════════════════════════════════════════════════
    TECHNIEKENGIDS PAGINA
 ══════════════════════════════════════════════════════════════ */
-.techniekengids-section {
-  padding: 6rem 0;
-  background: var(--white);
-}
-.techniekengids-header {
-  background: var(--background);
-  padding: 7rem 0 8rem;
-}
-.techniekengids-header-content {
-  text-align: center;
-  max-width: 720px;
-  margin: 0 auto;
-}
-.techniekengids-subtitle {
-  font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: var(--teal);
-  font-weight: 600;
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.6rem;
-}
-.techniekengids-subtitle::before,
-.techniekengids-subtitle::after {
-  content: "";
-  width: 24px;
-  height: 1.5px;
-  background: var(--teal);
-}
-.techniekengids-title {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(2.2rem, 5vw, 3rem);
-  font-weight: 400;
-  color: var(--black);
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.01em;
-  line-height: 1.15;
-}
-.techniekengids-intro {
-  font-size: 1.075rem;
-  color: var(--gray);
-  line-height: 1.8;
-  font-weight: 300;
-  max-width: 700px;
-  margin: 0 auto;
-}
-.techniek-section-title {
-  font-family: "Playfair Display", serif;
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  font-weight: 400;
-  color: var(--black);
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.01em;
-  line-height: 1.1;
-}
-.techniek-section-desc {
+.techniek-prose p {
   font-size: 1rem;
   color: var(--gray);
-  line-height: 1.7;
-  margin-bottom: 2.5rem;
+  line-height: 1.85;
+  margin-bottom: 1rem;
   font-weight: 300;
+}
+.techniek-prose strong {
+  color: var(--black);
+  font-weight: 600;
+}
+.techniek-tip {
+  background: var(--teal-light);
+  border-left: 2px solid var(--teal);
+  padding: 1rem 1.25rem;
 }
 .techniek-table {
   width: 100%;
@@ -2021,58 +1830,94 @@ a.text-link:hover,
   font-weight: 300;
 }
 /* ══════════════════════════════════════════════════════════════
-   PROMO PRICING — plak dit onderaan styles.css
+   ONZE STERKE PUNTEN
 ══════════════════════════════════════════════════════════════ */
-
-/* Visually-hidden utility (screen-reader-only) */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+.sterke-punten-section {
+  padding: 5rem 0 6rem;
+  background: var(--background);
 }
-
-/* Prijsblok — oude prijs boven, nieuwe prijs onder (zoals referentie) */
-.product-price {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
+.sterke-punten-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
 }
-
-/* Oude prijs — doorgestreept, gedempt, kleiner */
-.product-price s {
-  font-size: 0.85em;
-  font-weight: 400;
+.sterk-punt-item {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  background: var(--white);
+  border: var(--border);
+  transition:
+    transform 0.3s var(--ease-out),
+    box-shadow 0.3s var(--ease-out);
+}
+.sterk-punt-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
+}
+.sterk-punt-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 0.75rem;
+}
+.sterk-punt-item p {
+  font-size: 0.95rem;
   color: var(--gray);
-  text-decoration: line-through;
+  line-height: 1.6;
+  font-weight: 300;
 }
 
-/* Nieuwe prijs — nadruk, groter, geen underline van <ins> */
-.product-price ins {
+/* Google-reviews balk boven referenties */
+.reviews-google {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0 3rem;
+}
+.reviews-google-stars {
+  color: #fbbc04;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+.reviews-google-score {
+  font-size: 1.1rem;
+  color: var(--black);
+}
+.reviews-google-link {
+  color: var(--teal);
   text-decoration: none;
-  font-weight: 700;
-  font-size: 1.15em;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.2s;
+}
+.reviews-google-link:hover {
   color: var(--teal-dark);
 }
 
-/* "excl. btw" suffix — kleiner en lichter dan het bedrag ervoor */
-.price-vat {
-  font-size: 0.7em;
-  font-weight: 400;
-  color: var(--gray);
-  margin-left: 0.25rem;
+/* Opvallende webshopknop in footer */
+.footer-webshop-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: var(--teal);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  padding: 0.85rem 1.75rem;
+  text-decoration: none;
+  border-radius: 2px;
+  transition:
+    background 0.25s var(--ease-out),
+    transform 0.25s var(--ease-out);
+}
+.footer-webshop-btn:hover {
+  background: var(--teal-dark);
+  transform: translateY(-2px);
 }
 
-/* Footer webshop-knop — override .footer-col--brand a (0,1,1 > 0,1,0) */
-.footer-col--brand a.footer-webshop-btn {
-  color: var(--white);
-  border-bottom: none;
-}
 /* ══════════════════════════════════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════════════════════════════════ */
@@ -2084,19 +1929,6 @@ a.text-link:hover,
   .duurzaamheid-balk {
     grid-template-columns: repeat(2, 1fr);
   }
-  .bimos-grid {
-    grid-template-columns: 1fr;
-  }
-  .bimos-meer {
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  .bimos-meer-btn {
-    width: auto;
-  }
 }
 
 @media (max-width: 900px) {
@@ -2104,8 +1936,7 @@ a.text-link:hover,
     grid-template-columns: repeat(2, 1fr);
   }
   .waarom-inner,
-  .vrijheid-inner,
-  .vrijheid-inner--reverse {
+  .vrijheid-inner {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
@@ -2137,11 +1968,8 @@ a.text-link:hover,
     grid-template-columns: 1fr;
     gap: 2rem;
   }
-  .techniekengids-section {
-    padding: 5rem 0;
-  }
-  .techniekengids-header {
-    padding: 5rem 0 6rem;
+  .sterke-punten-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -2247,6 +2075,12 @@ a.text-link:hover,
   }
 }
 
+@media (max-width: 560px) {
+  .sterke-punten-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 520px) {
   .product-grid {
     grid-template-columns: 1fr;
@@ -2254,22 +2088,15 @@ a.text-link:hover,
   .product-img {
     height: 200px;
   }
-  .bimos-chairs-wrap {
-    grid-template-columns: repeat(2, 1fr);
-  }
   .contact-form-wrap {
     padding: 2rem 1.5rem;
   }
-  .contact-payment-icons,
   .contact-social-icons {
     justify-content: center;
   }
   .collectie-cta-btns {
     flex-direction: column;
     align-items: stretch;
-  }
-  .techniekengids-header {
-    padding: 4rem 0 5rem;
   }
 }
 
@@ -2280,115 +2107,7 @@ a.text-link:hover,
   .card-img {
     height: 220px;
   }
-  .levering-fotos {
-    grid-template-columns: 1fr;
-  }
   .kenmerken-grid {
     grid-template-columns: 1fr;
   }
-}
-/* ══════════════════════════════════════════════════════════════
-   ONZE STERKE PUNTEN
-══════════════════════════════════════════════════════════════ */
-.sterke-punten-section {
-  padding: 5rem 0 6rem;
-  background: var(--background);
-}
-.sterke-punten-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2.5rem;
-  margin-top: 3rem;
-}
-.sterk-punt-item {
-  text-align: center;
-  padding: 2rem 1.5rem;
-  background: var(--white);
-  border: var(--border);
-  transition:
-    transform 0.3s var(--ease-out),
-    box-shadow 0.3s var(--ease-out);
-}
-.sterk-punt-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.06);
-}
-.sterk-punt-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--black);
-  margin-bottom: 0.75rem;
-}
-.sterk-punt-item p {
-  font-size: 0.95rem;
-  color: var(--gray);
-  line-height: 1.6;
-  font-weight: 300;
-}
-@media (max-width: 900px) {
-  .sterke-punten-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media (max-width: 560px) {
-  .sterke-punten-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* SEO placeholder-tekst onder categoriefoto's */
-.card-text--seo {
-  font-style: italic;
-  color: var(--gray);
-  opacity: 0.7;
-}
-
-/* Google-reviews balk boven referenties */
-.reviews-google {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-  margin: 1.5rem 0 3rem;
-}
-.reviews-google-stars {
-  color: #fbbc04;
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-}
-.reviews-google-score {
-  font-size: 1.1rem;
-  color: var(--black);
-}
-.reviews-google-link {
-  color: var(--teal);
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  transition: color 0.2s;
-}
-.reviews-google-link:hover {
-  color: var(--teal-dark);
-}
-
-/* Opvallende webshopknop in footer */
-.footer-webshop-btn {
-  display: inline-block;
-  margin-top: 1.5rem;
-  background: var(--teal);
-  color: var(--white);
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.02em;
-  padding: 0.85rem 1.75rem;
-  text-decoration: none;
-  border-radius: 2px;
-  transition:
-    background 0.25s var(--ease-out),
-    transform 0.25s var(--ease-out);
-}
-.footer-webshop-btn:hover {
-  background: var(--teal-dark);
-  transform: translateY(-2px);
 }
