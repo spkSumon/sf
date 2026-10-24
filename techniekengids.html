@@ -14,7 +14,17 @@
           <div class="nav-logo">
             <img alt="logo" src="IMG/logo_sioen_office_furniture.png" />
           </div>
-          <ul class="nav-menu">
+          <button
+            class="nav-toggle"
+            id="navToggle"
+            type="button"
+            aria-controls="navMenu"
+            aria-expanded="false"
+            aria-label="Menu openen"
+          >
+            <span></span><span></span><span></span>
+          </button>
+          <ul class="nav-menu" id="navMenu">
             <li><a href="index.html">Home</a></li>
             <li><a href="collectie.html">Collectie</a></li>
             <li>
@@ -628,10 +638,6 @@
         </div>
       </div>
     </footer>
-    <script>
-      // Houd het jaartal in de footer automatisch actueel
-      document.getElementById("footerYear").textContent =
-        new Date().getFullYear();
-    </script>
+    <script src="JS/main.js"></script>
   </body>
 </html>

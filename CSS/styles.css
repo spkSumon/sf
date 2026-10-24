@@ -347,6 +347,93 @@ body {
   display: none;
 }
 
+/* ── Hamburgerknop (enkel zichtbaar op kleinere schermen) ── */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0 10px;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  cursor: pointer;
+}
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  background: var(--white);
+  border-radius: 1px;
+  transition:
+    transform 0.25s var(--ease-out),
+    opacity 0.2s;
+}
+/* Kruisje als het menu open is */
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+@media (max-width: 1100px) {
+  .nav-toggle {
+    display: flex;
+  }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    max-height: calc(100vh - var(--nav-h));
+    overflow-y: auto;
+    padding: 0.75rem 2.5rem 1.5rem;
+    background: #14150e;
+    border-bottom: 2px solid var(--teal);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+  }
+  .nav-menu.open {
+    display: flex;
+  }
+  .nav-menu a {
+    padding: 0.85rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .nav-menu a:hover {
+    background: none;
+    color: var(--teal);
+  }
+  .nav-menu a.active::after {
+    left: 0;
+    right: auto;
+    width: 24px;
+    bottom: 0.4rem;
+  }
+  /* Webshop-submenu staat open onder zijn link */
+  .nav-dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    min-width: 0;
+    padding: 0 0 0 1rem;
+  }
+  .nav-dropdown > a::after {
+    display: none;
+  }
+}
+
 /* ══════════════════════════════════════════════════════════════
    HERO
 ══════════════════════════════════════════════════════════════ */
@@ -1916,22 +2003,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Navbar dropdown valt inline open op mobiel */
-  .nav-dropdown-menu {
-    position: static;
-    opacity: 1;
-    visibility: visible;
-    transform: none;
-    box-shadow: none;
-    border: none;
-    background: transparent;
-    min-width: 0;
-    padding: 0 0 0 1rem;
-  }
-  .nav-dropdown > a::after {
-    display: none;
-  }
-
   .collectie-filter-section {
     position: static;
   }
@@ -2006,8 +2077,41 @@ body {
 }
 
 @media (max-width: 520px) {
+  /* Lange Nederlandse woorden afbreken i.p.v. buiten het scherm te lopen */
+  h1,
+  h2,
+  h3 {
+    hyphens: auto;
+    overflow-wrap: break-word;
+  }
+  .hero-title {
+    font-size: 2.4rem;
+  }
+  .hero-btns {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  /* Popup als smalle balk onderaan i.p.v. een blok over de inhoud */
+  .scroll-popup {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    width: auto;
+    padding: 1rem 2.5rem 1rem 1.25rem;
+  }
+  .scroll-popup-text {
+    margin-bottom: 0.5rem;
+  }
   .product-grid {
     grid-template-columns: 1fr;
+  }
+  .duurzaamheid-balk {
+    grid-template-columns: 1fr;
+  }
+  .duurzaamheid-item {
+    padding: 2.5rem 1.5rem;
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   }
   .product-img {
     height: 200px;
