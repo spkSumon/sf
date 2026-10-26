@@ -1,0 +1,5 @@
+# Alle zoekmachines mogen de site bekijken, behalve de testpagina
+User-agent: *
+Disallow: /test.html
+
+Sitemap: https://spksumon.github.io/sf/sitemap.xml
