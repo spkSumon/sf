@@ -1853,9 +1853,112 @@ body {
   gap: 2.5rem;
   margin-top: 3rem;
 }
-.sterke-punten-grid--3 {
+/* ── Bimos-pagina: kaarten voor toepassingen en bekleding ── */
+.bimos-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+.bimos-grid--2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.bimos-grid--3 {
   grid-template-columns: repeat(3, 1fr);
+  margin-top: 1.5rem;
+}
+.bimos-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 2rem;
+  background: var(--white);
+  border: var(--border);
+}
+.bimos-card p {
+  font-size: 0.975rem;
+  color: var(--gray);
+  line-height: 1.8;
+  font-weight: 300;
+}
+.bimos-card .bimos-card-label,
+.bimos-card-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--teal);
+}
+.bimos-card-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--black);
+}
+.bimos-card-chair {
+  margin-top: auto;
+  padding-top: 1.25rem;
+  border-top: var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+}
+.bimos-card-chair .btn-product {
   margin-top: 0;
+}
+/* Supertec in de kijker */
+.bimos-card-img {
+  width: calc(100% + 4rem);
+  max-width: none;
+  margin: -2rem -2rem 0.5rem;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.bimos-highlight-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.bimos-highlight {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 3rem;
+  padding: 2.5rem;
+  background: var(--teal-light);
+  border-left: 3px solid var(--teal);
+}
+.bimos-highlight-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  color: var(--black);
+  margin: 0.25rem 0 1rem;
+}
+.bimos-highlight-intro p:not(.bimos-card-label) {
+  color: var(--gray);
+  line-height: 1.8;
+  font-weight: 300;
+}
+.bimos-highlight-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem 2rem;
+}
+.bimos-highlight-list dt {
+  font-weight: 600;
+  color: var(--black);
+  margin-bottom: 0.3rem;
+}
+.bimos-highlight-list dd {
+  font-size: 0.95rem;
+  color: var(--gray);
+  line-height: 1.7;
+  font-weight: 300;
 }
 .bimos-subtitle {
   margin-left: auto;
@@ -1998,7 +2101,9 @@ body {
   .sterke-punten-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .sterke-punten-grid--3 {
+  .bimos-grid--2,
+  .bimos-grid--3,
+  .bimos-highlight {
     grid-template-columns: 1fr;
   }
 }
@@ -2096,6 +2201,10 @@ body {
 }
 
 @media (max-width: 520px) {
+  .bimos-card-img {
+    width: calc(100% + 3rem);
+    margin: -1.5rem -1.5rem 0.5rem;
+  }
   /* Lange Nederlandse woorden afbreken i.p.v. buiten het scherm te lopen */
   h1,
   h2,
@@ -2109,6 +2218,13 @@ body {
   .hero-btns {
     flex-direction: column;
     align-items: stretch;
+  }
+  .bimos-card,
+  .bimos-highlight {
+    padding: 1.5rem;
+  }
+  .bimos-highlight-list {
+    grid-template-columns: 1fr;
   }
   /* Popup als smalle balk onderaan i.p.v. een blok over de inhoud */
   .scroll-popup {
